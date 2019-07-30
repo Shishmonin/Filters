@@ -2,1066 +2,1358 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>ANSVO</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>zhishi</title>
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+  <!-- <link rel="stylesheet" href="./libs/jquery-ui.css"> -->
+  <link rel="stylesheet" href="./css/sal.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- <script type="text/javascript" src="./js/mycode.js"></script> -->
+
 </head>
 <body>
-  <!-- ШАПКА САЙТА -->
-  <header class="header d-flex">
-    <!-- ФУТЕР ШАПКА ПРОФИЛЯ -->
-    <div class="header_top">
-      <div class="container_top d-flex">
-        <!-- БЛОК С ЛОГО И ПЕРЕКЛЮЧАТЕЛЕМ СТАТУСА ПОЛЬЗОВАТЕЛЯ -->
-          <div class="left d-flex">
-            <img src="img/logo.svg" alt="ANSVO" class=logo>
-            <!-- ПЕРЕКЛЮЧАТЕЛЬ СТАТУСА ПОЛЬЗОВАТЕЛЯ -->
-            <ul class="user_status d-flex">
-              <li class="user_status_item">
-                <a href="#" >Заказчикам</a>
-              </li>
-              <li class="user_status_item">
-                <a href="#" >Исполнителям</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="right d-flex">
-            <div class="geo_btn_prof d-flex">
-              <div class="geposition d-flex">
-                <img src="img/placeholder.svg" alt="geo" class="placeholder">
-                <p class="city">Москва и МО</p>
-              </div>
-              <div class="btm_profile d-flex">
-              <div class="btn d-flex">
-                <p>Подать заявку</p>
-                <img src="img/pointer-wh-down.svg" alt="pointer" class="pointer_btn">
-              </div>
-              <div class="profile d-flex">
-                <div class="line">
-                </div>
-                <img src="img/icon-user-header.svg" alt="user_icon" class="profile_img">
-                <div class="profile_info">
-                  <div class="profile_name">
-                    Виктор Живилков
-                  </div>
-                  <div class="profile_status">
-                    Заказчик
-                  </div>
-                </div>
-
-                <img src="img/pointer-gr-down.svg" alt="pointer" class="pointer_profile">
-              </div>
-              </div>
-            </div>
-          </div>
+  <!-- ФОРМЫ ОБРАТНОЙ СВЯЗИ -->
+  <!-- Форма для первого экрана -->
+  <div class="popup-first-screen">
+    <div class="form1-container" data-sal-duration="1000" data-sal="slide-up" data-sal-delay="100" data-sal-easing="ease-out-bounce">
+      <div class="form1-left">
+        <h2>Свяжитесь со мной</h2>
+        <p class="form1-desc">Свяжемся и подберем именно под вас.</p>
+        <div class="input-block1">
+          <input type="email" name="email" id="email1" placeholder="Имя">
+        </div>
+        <div class="input-block1">
+          <input type="password" name="password" id="password1" placeholder="Телефон">
+        </div>
+        <div class="input-block1">
+          <input type="text" name="text" id="password1" placeholder="Куда нужен фильтр?">
+        </div>
+        <!-- <select class="select-block2">
+          <option>Циклон</option>
+          <option>Вихрь</option>
+          <option>Греус</option>
+          <option>Барос</option>
+        </select> -->
+        <div class="form1-buttons">
+          <button class="btn">Отправить</button>
+        </div>
       </div>
+      <div class="form1-right d-flex">
+          <img src="./img/Abstraktforform.svg" alt="">
+      </div>
+      <button class="icon-button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+          <path d="M 25 3 C 12.86158 3 3 12.86158 3 25 C 3 37.13842 12.86158 47 25 47 C 37.13842 47 47 37.13842 47 25 C 47 12.86158 37.13842 3 25 3 z M 25 5 C 36.05754 5 45 13.94246 45 25 C 45 36.05754 36.05754 45 25 45 C 13.94246 45 5 36.05754 5 25 C 5 13.94246 13.94246 5 25 5 z M 16.990234 15.990234 A 1.0001 1.0001 0 0 0 16.292969 17.707031 L 23.585938 25 L 16.292969 32.292969 A 1.0001 1.0001 0 1 0 17.707031 33.707031 L 25 26.414062 L 32.292969 33.707031 A 1.0001 1.0001 0 1 0 33.707031 32.292969 L 26.414062 25 L 33.707031 17.707031 A 1.0001 1.0001 0 0 0 32.980469 15.990234 A 1.0001 1.0001 0 0 0 32.292969 16.292969 L 25 23.585938 L 17.707031 16.292969 A 1.0001 1.0001 0 0 0 16.990234 15.990234 z"></path>
+        </svg>
+      </button>
     </div>
-    <!-- ФУТЕР НАВИГАЦИЯ -->
-    <div class="header_down">
-      <div class="container_down d-flex">
-        <ul class="menu d-flex">
-          <li class="menu_item">
-            <a href="#">Тендеры</a>
-          </li>
-          <li class="menu_item">
-              <a href="#">Исполнители</a>
-          </li>
-          <li class="menu_item">
-              <a href="#">Как пользоваться?</a>
-          </li>
-          <li class="menu_item">
-              <a href="#">База знаний</a>
-          </li>
-          <li class="menu_item">
-              <a href="#">Служба поддержки</a>
-          </li>
-        </ul>
+  </div>
+  <!-- Форма для выгодных предложений -->
+  <div class="popup-profit">
+    <div class="form1-container" data-sal-duration="1000" data-sal="slide-up" data-sal-delay="100" data-sal-easing="ease-out-bounce">
+      <div class="form1-left">
+        <h2>Мне нужен фильтр</h2>
+        <p class="form1-desc">Укажите заинтересовавшую модель</p>
+        <select class="select-block2">
+          <option>Циклон</option>
+          <option>Вихрь</option>
+          <option>Греус</option>
+          <option>Барос</option>
+        </select>
+        <div class="input-block1">
+          <input type="email" name="email" id="email1" placeholder="Имя">
+        </div>
+        <div class="input-block1">
+          <input type="password" name="password" id="password1" placeholder="Телефон">
+        </div>
+        <!-- <div class="input-block1">
+          <input type="text" name="text" id="password1" placeholder="Куда нужен фильтр?">
+        </div> -->
+
+        <div class="form1-buttons">
+          <button class="btn">Отправить</button>
+        </div>
       </div>
+      <div class="form1-right d-flex">
+          <img src="./img/Abstraktforform.svg" alt="">
+      </div>
+      <button class="icon-button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+          <path d="M 25 3 C 12.86158 3 3 12.86158 3 25 C 3 37.13842 12.86158 47 25 47 C 37.13842 47 47 37.13842 47 25 C 47 12.86158 37.13842 3 25 3 z M 25 5 C 36.05754 5 45 13.94246 45 25 C 45 36.05754 36.05754 45 25 45 C 13.94246 45 5 36.05754 5 25 C 5 13.94246 13.94246 5 25 5 z M 16.990234 15.990234 A 1.0001 1.0001 0 0 0 16.292969 17.707031 L 23.585938 25 L 16.292969 32.292969 A 1.0001 1.0001 0 1 0 17.707031 33.707031 L 25 26.414062 L 32.292969 33.707031 A 1.0001 1.0001 0 1 0 33.707031 32.292969 L 26.414062 25 L 33.707031 17.707031 A 1.0001 1.0001 0 0 0 32.980469 15.990234 A 1.0001 1.0001 0 0 0 32.292969 16.292969 L 25 23.585938 L 17.707031 16.292969 A 1.0001 1.0001 0 0 0 16.990234 15.990234 z"></path>
+        </svg>
+      </button>
     </div>
-  </header>
-  <!-- ОСНОВНОЙ КОНТЕНТ -->
-  <main>
-    <!-- НАЧАЛО КОНТЕЙНЕРА ПЕРВОГО ЭКРАНА С ОФЕРОМ И ПОЛЕМ ЗАЯВКИ -->
-    <div class="main_content d-flex">
+  </div>
+  <!-- Форма для области применения -->
+  <div class="popup-area">
+    <div class="form1-container" data-sal-duration="1000" data-sal="slide-up" data-sal-delay="100" data-sal-easing="ease-out-bounce">
+      <div class="form1-left">
+        <h2>Мне нужен фильтр</h2>
+        <p class="form1-desc">Укажите из какой сферы модель</p>
+        <select class="select-block2">
+          <option>Бетонные заводы</option>
+          <option>Деревообработка</option>
+          <option>Добыча минералов</option>
+          <option>Металлургия</option>
+          <option>Металлообработка</option>
+          <option>Пищевая промышленность</option>
+          <option>Плазменная резка</option>
+          <option>Фармацептика</option>
+          <option>Химическая промышленность</option>
+          <option>Энергетическая промышленность</option>
+        </select>
+        <div class="input-block1">
+          <input type="email" name="email" id="email1" placeholder="Имя">
+        </div>
+        <div class="input-block1">
+          <input type="password" name="password" id="password1" placeholder="Телефон">
+        </div>
+        <!-- <div class="input-block1">
+          <input type="text" name="text" id="password1" placeholder="Куда нужен фильтр?">
+        </div> -->
 
-      <div class="ofer">
-        <h1>Поиск исполнителей в строительстве и ремонте</h1>
-        <p>Заказать строительство и ремонт, так же легко, как заказать такси, а самое<br> главное бесплатно</p>
+        <div class="form1-buttons">
+          <button class="btn">Отправить</button>
+        </div>
       </div>
+      <div class="form1-right d-flex">
+          <img src="./img/Abstraktforform.svg" alt="">
+      </div>
+      <button class="icon-button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+          <path d="M 25 3 C 12.86158 3 3 12.86158 3 25 C 3 37.13842 12.86158 47 25 47 C 37.13842 47 47 37.13842 47 25 C 47 12.86158 37.13842 3 25 3 z M 25 5 C 36.05754 5 45 13.94246 45 25 C 45 36.05754 36.05754 45 25 45 C 13.94246 45 5 36.05754 5 25 C 5 13.94246 13.94246 5 25 5 z M 16.990234 15.990234 A 1.0001 1.0001 0 0 0 16.292969 17.707031 L 23.585938 25 L 16.292969 32.292969 A 1.0001 1.0001 0 1 0 17.707031 33.707031 L 25 26.414062 L 32.292969 33.707031 A 1.0001 1.0001 0 1 0 33.707031 32.292969 L 26.414062 25 L 33.707031 17.707031 A 1.0001 1.0001 0 0 0 32.980469 15.990234 A 1.0001 1.0001 0 0 0 32.292969 16.292969 L 25 23.585938 L 17.707031 16.292969 A 1.0001 1.0001 0 0 0 16.990234 15.990234 z"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
 
-      <div class="type_request d-flex">
 
-        <div class="type_request_left d-flex">
-            <svg width="229px" height="60px" viewBox="0 0 229 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                  <g id="-g-Zakazchik-Copy-6" transform="translate(-460.000000, -476.000000)" fill="#3B4256">
-                      <g id="Group-8" transform="translate(460.000000, 476.000000)">
-                          <path d="M6,0 L209,0 L229,30.2604252 L209,60 L6,60 C2.6862915,60 2.55313019e-13,57.3137085 2.54907206e-13,54 L2.55795385e-13,6 C2.55389573e-13,2.6862915 2.6862915,6.08718376e-16 6,0 Z" id="Rectangle"></path>
-                      </g>
-                  </g>
+  <!-- ПЕРВЫЙ ЭКРАН -->
+  <div class="first-screen container d-flex">
+    <div class="first-screen-backgraund d-flex">
+      <img src="./img/first-screen.png" alt="">
+      <div class="wrapper d-flex">
+          <!-- Открывающееся бургер меню в мобилке -->
+        <div class="popup-menu">
+          <div class="nav-tel d-flex">
+            <a href="#">+7 000 000 00 00</a>
+            <a href="#">+7 000 000 00 00</a>
+          </div>
+          <div class="nav-mail d-flex">
+            <a href="#">filtrsale@chisto.com</a>
+            <a href="#">filtrbuy@chisto.com</a>
+          </div>
+        </div>
+
+        <header class="d-flex">
+          <div class="logo-header d-flex">
+            <svg width="329" height="120">
+              <g fill="#449164" transform="matrix(9.823182416719316,0,0,9.823182416719316,2.927315405006171,-84.1060868027217)">
+                <path d="M10.82 14.680000000000001 l0 0.66 l-7.04 0 c0 1.16 1.18 1.98 2.16 1.98 c0.96 0 1.84 -0.38 2.3 -1.22 l1.98 1.82 c-0.8 1.08 -2.02 1.84 -4.28 1.84 c-3.24 0 -5.22 -2.16 -5.22 -5.08 s1.92 -5.1 5.04 -5.1 s5.06 2.14 5.06 5.1 z M3.84 13.46 l3.88 0 c-0.16 -0.94 -0.84 -1.44 -1.96 -1.44 c-1.08 0 -1.74 0.58 -1.92 1.44 z"></path></g><g id="SvgjsG1273" featurekey="text1" fill="#4c4c4c" transform="matrix(2.039608181178977,0,0,2.039608181178977,126.26692472600067,34.94414247654093)"><path d="M4.54 16.94 l7.64 0 l0 2.66 l-10.84 0 l0 -15 l10.48 0 l0 2.66 l-7.28 0 l0 3.22 l5.96 0 l0 2.68 l-5.96 0 l0 3.78 z M25.619999999999997 15.040000000000003 l2.12 2.12 c-1.54 1.72 -3.66 2.62 -5.9 2.62 c-4.28 0 -7.7 -3.32 -7.7 -7.68 c0 -4.34 3.42 -7.66 7.7 -7.66 c2.24 0 4.36 0.9 5.92 2.64 l-2.16 2.16 c-0.84 -1.4 -2.28 -2.14 -3.76 -2.14 c-2.66 0 -4.5 2.42 -4.5 5 s1.82 5.02 4.5 5.02 c1.14 0 2.26 -0.34 3.78 -2.08 z M36.86 7.100000000000001 c-2.64 0 -4.5 2.44 -4.5 5 c0 2.54 1.86 5.02 4.5 5.02 c2.68 0 4.5 -2.44 4.5 -5.02 s-1.82 -5 -4.5 -5 z M36.86 4.440000000000001 c4.26 0 7.7 3.32 7.7 7.66 c0 4.36 -3.44 7.68 -7.7 7.68 s-7.7 -3.32 -7.7 -7.68 c0 -4.34 3.44 -7.66 7.7 -7.66 z M57.06 4.600000000000001 l0 2.66 l-4.34 0 l0 12.34 l-3.22 0 l0 -12.34 l-4.34 0 l0 -2.66 l11.9 0 z M62.059999999999995 16.94 l7.64 0 l0 2.66 l-10.84 0 l0 -15 l10.48 0 l0 2.66 l-7.28 0 l0 3.22 l5.96 0 l0 2.68 l-5.96 0 l0 3.78 z M83.13999999999999 15.040000000000003 l2.12 2.12 c-1.54 1.72 -3.66 2.62 -5.9 2.62 c-4.28 0 -7.7 -3.32 -7.7 -7.68 c0 -4.34 3.42 -7.66 7.7 -7.66 c2.24 0 4.36 0.9 5.92 2.64 l-2.16 2.16 c-0.84 -1.4 -2.28 -2.14 -3.76 -2.14 c-2.66 0 -4.5 2.42 -4.5 5 s1.82 5.02 4.5 5.02 c1.14 0 2.26 -0.34 3.78 -2.08 z M96.1 4.600000000000001 l3.2 0 l0 15 l-3.2 0 l0 -6.16 l-5.5 0 l0 6.16 l-3.2 0 l0 -15 l3.2 0 l0 6.16 l5.5 0 l0 -6.16 z">
+                </path>
               </g>
-              <text x="20%" y="58%">Мне требуется</text>
-          </svg>
-        </div>
+            </svg>
+          </div>
+          <nav class="nav-header d-flex">
+            <div class="nav-tel d-flex">
+              <a href="#">+7 000 000 00 00</a>
+              <a href="#">+7 000 000 00 00</a>
+            </div>
+            <div class="nav-mail d-flex">
+              <a href="#">filtrsale@chisto.com</a>
+              <a href="#">filtrbuy@chisto.com</a>
+            </div>
 
-        <div class="type_request_center d-flex">
-          <p>Проектирование</p>
-          <img src="./img/pointer-gr-down-graf.svg" alt="point">
-        </div>
-        <div class="type_request_right d-flex"> Подать заявку</div>
+          </nav>
+          <div class="burger-header">
+            <div id="webapp_cover">
+              <div id="menu_button">
+                <input type="checkbox" id="menu_checkbox">
+                <label for="menu_checkbox" id="menu_label">
+                  <div id="menu_text_bar"></div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </header>
       </div>
-
-      <div class="instruction d-flex">
-
-        <div class="instruction_item">
-          <img src="./img/icon-sent-request.svg" alt="instruction_i">
-          Размести заявку
-        </div>
-
-        <div class="line"></div>
-
-        <div class="instruction_item">
-          <img src="./img/icon-give-offer.svg" alt="instruction_i">
-          Получай предложения
-        </div>
-
-        <div class="line"></div>
-
-        <div class="instruction_item">
-          <img src="./img/icon-questions.svg" alt="instruction_i">
-          Задавай вопросы
-        </div>
-
-        <div class="line"></div>
-
-        <div class="instruction_item">
-          <img src="./img/icon-take-best.svg" alt="instruction_i">
-          Выбирай лучшего
+      <div class="wrapper offer d-flex">
+        <div class="first-screen_offer d-flex">
+          <h1>Скидки на промышленные фильтры очистки газов</h1>
+          <p>В честь начала праздника Всемирного дня окружающей среды с 5 июня по 13 июля снижаем цены на самые ходовые модели газоочистителей. Оставьте заявку, что бы гарантированно получить самую низкую цену от производителя.</p>
+          <button class="btn btn-first-screen">Подобрать</button>
         </div>
       </div>
     </div>
-    <!-- НАЧАЛО КОНТЕЙНЕРА ВИДЫ РАБОТ -->
-    <div class="container_category d-flex">
+  </div>
+  <main>
+    <!-- ВАМ К НАМ ЕСЛИ -->
+    <div class="why-we container d-flex">
+      <div class="wrapper why d-flex">
+        <h2>Вы купите оборудованиу у нас, если:</h2>
+        <div class="block-why d-flex">
+          <div class="why-reason" data-sal-duration="1400" data-sal="slide-right" data-sal-delay="100" data-sal-easing="ease-out-bounce">
+            <div class="ggg">
+              <h4>Вам важно работать напрямую с производителем</h4>
+              <p>Имеем экспертизу и точно знаем, что подъберем оптимальное решение</p>
+            </div>
+            <div class="ggg">
+              <h4>Вы ищите честную цену за оборудование</h4>
+              <p>Никогда не делаем скидки в ущерб качеству</p>
+            </div>
+            <div class="ggg">
+              <h4>Вам не нужны проблемы с контролирующими органами</h4>
+              <p>Наше оборудованием соответствует всем стандартам и стабильно обеспечивает необходимую степень очистки</p>
+            </div>
+            <div class="ggg">
+              <h4>Вам нужна нестандартная конфигурация оборудования</h4>
+              <p>Все характеристики оборудования начиная от мощности и закачивая физическими габаритами можно изменить</p>
+            </div>
+            <div class="ggg">
+              <h4>Вас интересует оборудование простое в эксплуатации и обслуживании</h4>
+              <p>Оборудование собирается по общепринятым нормам, при помощи логических контроллеров. По этому замена расходников становится интуитивно понятной и легкой</p>
+            </div>
+            <div class="ggg">
+              <h4>Вас волнует срок службы оборудования</h4>
+              <p>Абразивный износ не страшен, скорость потока газа расчитывается на максимально медленное движение. Все оборудование комплектуется импортными деталями</p>
+            </div>
+            <div class="ggg">
+              <h4>Вы хотите смонтировать оборудование своими силами</h4>
+              <p>Крупноузловая сборка происходит по нами составленной инструкции, большинству заказчиков ее достаточно. Так же в штате имеются монтажные бригады</p>
+            </div>
+            <div class="ggg">
+              <h4>Вам важна доступность расходников и запчастей</h4>
+              <p>Используем в работе запчасти компаний широко представленных на российском рынке</p>
+            </div>
+            <!-- <h4>Вам важно работать напрямую с производителем</h4> -->
+            <!-- <h4>Вы ищите честную цену за оборудование</h4> -->
+            <!-- <h4>Вам не нужны проблемы с контролирующими органами</h4> -->
+            <!-- <h4>Вам нужна нестандартная конфигурация оборудования</h4> -->
+            <!-- <h4>Вас интересует оборудование простое в эксплуатации и обслуживании</h4> -->
+            <!-- <h4>Вас волнует срок службы оборудования</h4> -->
+            <!-- <h4>Вы хотите смонтировать оборудование своими силами</h4> -->
+            <!-- <h4>Вам важна доступность расходников и запчастей</h4> -->
+          </div>
+          <div class="why-illustration">
+            <img src="./img/Почему-мы.svg" alt="why we">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- САМЫЕ ВЫГОДНЫЕ ПРЕДЛОЖЕНИЯ -->
+    <div class="profitable-proposition container d-flex">
+      <div class="wrapper proposition d-flex">
+        <h2>Самые выгодные предложения</h2>
+        <div class="block-proposition d-flex">
 
-      <h2>Какие виды работ размещают?</h2>
-      <div class="category d-flex">
+          <div class="card card1 d-flex" data-sal-duration="1400" data-sal="slide-up" data-sal-delay="100" data-sal-easing="ease-out-bounce">
+            <div class="additional d-flex">
+              <!-- Левый блок с картинкой фильтра -->
+              <div class="user-card">
+              </div>
+              <!-- Правый блок с информацией при заливке -->
+              <div class="more-info d-flex">
+                <div class="dopspecifications-profitable-proposition d-flex">
+                  <div class="dopspecifications-profitable-proposition__item">
+                      <h4>Технические характеристики</h4>
+                        <p> <strong>Производительность:</strong></p>
+                        <p class="specification-profitable-proposition-value">2 000 – 6 000 м<sup>3</sup>/ч.</p>
+                        <p> <strong>Площадь фильтрации:</strong></p>
+                        <p class="specification-profitable-proposition-value">20 – 60 м<sup>2</sup>/ч.</p>
+                        <p> <strong>Скорость фильтрации:</strong></p>
+                        <p class="specification-profitable-proposition-value">1 – 2 м/мин.</p>
+                        <p> <strong>Рабочая температура в фильтре:</strong></p>
+                        <p class="specification-profitable-proposition-value">40 – 280 <sup>0</sup>С.</p>
+                        <p> <strong>Концентрация пыли на выходе:</strong></p>
+                        <p class="specification-profitable-proposition-value">не более 5 – 10 мг/м<sup>3</sup>.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Правый блок с основной информацией на перевью -->
+            <div class="general d-flex">
+              <h2>ЦИКЛОН</h2>
+              <p>«Циклон большой» это готовая фильтровальная установка для различных видов производств, где требуется очистка грязного воздуха.
+                  Состоит из рукавных фильтров различной степени очистки, также имеет вход циклонного типа и воздушную очистку фильтровальных элементов с вентилятором. </p>
+              <div class="prise-block">
+                <span>320 000p</span> <br>
+                <span>260 000p</span>
+              </div>
+            </div>
+          </div>
 
-        <div class="category_houses d-flex">
-          <img src="./img/icon-houses.svg" class="houses" alt="house">
-          <div class="category_article">
-            <h3>Строительство</h3>
-            <p>от 150 р за м2</p>
-            <section>
-              <ul>
-                <li>Строительство "Под ключ"</li>
-                <li>Строительство "Теплого контура"</li>
-                <li>Устройство фундамента</li>
-                <li>Возведение стен и перекрытий</li>
-                <li>Устройство кровли</li>
-                <li>Внешняя отделка</li>
-                <li>Водосточная система</li>
+          <div class="card card2 d-flex" data-sal-duration="1400" data-sal="slide-up" data-sal-delay="100" data-sal-easing="ease-out-bounce">
+            <div class="additional d-flex">
+              <!-- Левый блок с картинкой фильтра -->
+              <div class="user-card">
+              </div>
+              <!-- Правый блок с информацией при заливке -->
+              <div class="more-info d-flex">
+                <div class="dopspecifications-profitable-proposition d-flex">
+                  <div class="dopspecifications-profitable-proposition__item">
+                      <h4>Технические характеристики</h4>
+                        <p> <strong>Производительность:</strong></p>
+                        <p class="specification-profitable-proposition-value">2 000 – 6 000 м<sup>3</sup>/ч.</p>
+                        <p> <strong>Площадь фильтрации:</strong></p>
+                        <p class="specification-profitable-proposition-value">20 – 60 м<sup>2</sup>/ч.</p>
+                        <p> <strong>Скорость фильтрации:</strong></p>
+                        <p class="specification-profitable-proposition-value">1 – 2 м/мин.</p>
+                        <p> <strong>Рабочая температура в фильтре:</strong></p>
+                        <p class="specification-profitable-proposition-value">40 – 280 <sup>0</sup>С.</p>
+                        <p> <strong>Концентрация пыли на выходе:</strong></p>
+                        <p class="specification-profitable-proposition-value">не более 5 – 10 мг/м<sup>3</sup>.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Правый блок с основной информацией на перевью -->
+            <div class="general d-flex">
+              <h2>ГРЕУС</h2>
+              <p>Фильтровальные установки «Греус» предназначены для обеспыливания различных транспортировочных механизмов, таких как конвейеры, нории, загрузочные воронки, бункеры, ленточные транспортеры и прочие транспортеры.</p>
+              <div class="prise-block">
+                <span>180 000p</span> <br>
+                <span>140 000p</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card card3 d-flex" data-sal-duration="1400" data-sal="slide-up" data-sal-delay="200" data-sal-easing="ease-out-bounce">
+            <div class="additional d-flex">
+              <!-- Левый блок с картинкой фильтра -->
+              <div class="user-card">
+              </div>
+              <!-- Правый блок с информацией при заливке -->
+              <div class="more-info d-flex">
+                <div class="dopspecifications-profitable-proposition d-flex">
+                  <div class="dopspecifications-profitable-proposition__item">
+                      <h4>Технические характеристики</h4>
+                        <p> <strong>Производительность:</strong></p>
+                        <p class="specification-profitable-proposition-value">2 000 – 6 000 м<sup>3</sup>/ч.</p>
+                        <p> <strong>Площадь фильтрации:</strong></p>
+                        <p class="specification-profitable-proposition-value">20 – 60 м<sup>2</sup>/ч.</p>
+                        <p> <strong>Скорость фильтрации:</strong></p>
+                        <p class="specification-profitable-proposition-value">1 – 2 м/мин.</p>
+                        <p> <strong>Рабочая температура в фильтре:</strong></p>
+                        <p class="specification-profitable-proposition-value">40 – 280 <sup>0</sup>С.</p>
+                        <p> <strong>Концентрация пыли на выходе:</strong></p>
+                        <p class="specification-profitable-proposition-value">не более 5 – 10 мг/м<sup>3</sup>.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Правый блок с основной информацией на перевью -->
+            <div class="general d-flex">
+              <h2>ВИХРЬ</h2>
+              <p>Вихрь это фильтровальные агрегаты с двухступенчатой очисткой воздуха, которые предназначены для очистки сухих воздушных потоков от различных видов не слипающейся и не волокнистой средне-крупнодисперсной пыли в составе систем вытяжной вентиляции, систем очистки и рециркуляции воздуха. 
+              </p>
+              <div class="prise-block">
+                <span>170 000p</span> <br>
+                <span>125 000p</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card card4 d-flex" data-sal-duration="1400" data-sal="slide-up" data-sal-delay="200" data-sal-easing="ease-out-bounce">
+            <div class="additional d-flex">
+              <!-- Левый блок с картинкой фильтра -->
+              <div class="user-card">
+              </div>
+              <!-- Правый блок с информацией при заливке -->
+              <div class="more-info d-flex">
+                <div class="dopspecifications-profitable-proposition d-flex">
+                  <div class="dopspecifications-profitable-proposition__item">
+                      <h4>Технические характеристики</h4>
+                        <p> <strong>Производительность:</strong></p>
+                        <p class="specification-profitable-proposition-value">2 000 – 6 000 м<sup>3</sup>/ч.</p>
+                        <p> <strong>Площадь фильтрации:</strong></p>
+                        <p class="specification-profitable-proposition-value">20 – 60 м<sup>2</sup>/ч.</p>
+                        <p> <strong>Скорость фильтрации:</strong></p>
+                        <p class="specification-profitable-proposition-value">1 – 2 м/мин.</p>
+                        <p> <strong>Рабочая температура в фильтре:</strong></p>
+                        <p class="specification-profitable-proposition-value">40 – 280 <sup>0</sup>С.</p>
+                        <p> <strong>Концентрация пыли на выходе:</strong></p>
+                        <p class="specification-profitable-proposition-value">не более 5 – 10 мг/м<sup>3</sup>.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Правый блок с основной информацией на перевью -->
+            <div class="general d-flex">
+              <h2>БАРОС</h2>
+              <p>Фильтровальный комплекс с многоступенческой очисткой обеспечивает отличную очистку воздуха от сухой пыли.
+                «Барос» способен возвращать в помещение 100 % очищенного воздуха и благодаря этому у собственника снижаются затраты на нагрев приточного воздуха. 
+              </p>
+              <div class="prise-block">
+                <span>180 000p</span> <br>
+                <span>135 000p</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <button class="btn btn-profit" data-sal-duration="1600" data-sal="slide-up" data-sal-delay="100" data-sal-easing="ease-out-bounce">Отправить заявку</button>
+      </div>
+    </div>
+    <!-- ОБЛАСТИ ПРИМЕНЕНИЯ -->
+    <div class="application-area container d-flex">
+      <div class="wrapper  d-flex">
+        <h2 data-sal-duration="1400" data-sal="slide-down" data-sal-delay="200" data-sal-easing="ease-out-bounce">Оборудование по областям применения</h2>
+        <div class="naccs">
+          <div class="grid d-flex">
+            <div class="gc gc--1-of-3" data-sal-duration="1400" data-sal="slide-right" data-sal-delay="100" data-sal-easing="ease-out-bounce">
+              <div class="menu">
+                <div class="active"><span class="light"></span><span>Бетонные заводы</span></div>
+                <div><span class="light"></span><span>Деревообработка</span></div>
+                <div><span class="light"></span><span>Добыча минералов</span></div>
+                <div><span class="light"></span><span>Металлургия</span></div>
+                <div><span class="light"></span><span>Металлообработка</span></div>
+                <div><span class="light"></span><span>Пищевая промышленность</span></div>
+                <div><span class="light"></span><span>Плазменная резка</span></div>
+                <div><span class="light"></span><span>Фармацептика</span></div>
+                <div><span class="light"></span><span>Химическая промышленность</span></div>
+                <div><span class="light"></span><span>Энергетическая промышленность</span></div>
+              </div>
+            </div>
+            <div class="gc gc--2-of-3" data-sal-duration="1400" data-sal="slide-left" data-sal-delay="300" data-sal-easing="ease-out-bounce">
+              <ul class="nacc">
+                <!-- БЕТОН -->
+                <li class="active">
+                  <div class="area d-flex">
+                      <div class="text-application-area">
+                        <h4>Рукавный фильтр для линии фасовки сыпучих материалов</h4>
+                        <p>Рукавный фильтр РИТ-3 представляет собой корпус, имеющий боковую дверь для монтажа фильтр-элементов.
+                          Ввиду горизонтальной загрузки фильтровальных элементов, рукавные фильтры РИТ имеют  компактные габариты.
+                          Размеры устройства не требуют большого пространства с целью для обслуживания, ни с боковых сторон, ни над фильтром.
+                          Над дверьми фильтра, расположены блоки с импульсными, электромагнитными клапанами.
+                          Под корпусом фильтра установлен пирамидальный бункер без шнека. Дополнительные устройства пылевыгрузки можно монтировать к фланцу выгрузки из бункера.
+                        </p>
+                      </div>
+                      <div class="info-application-area d-flex">
+
+                      <div class="specifications-application-area d-flex">
+                        <h4>Технические характеристики</h4>
+                        <div class="specifications-application-area__item">
+                          <p> <strong>Производительность:</strong></p>
+                          <p class="specification-application-area-value">6 000 – 10 000 м<sup>3</sup>/ч.</p>
+                          <p> <strong>Площадь фильтрации:</strong></p>
+                          <p class="specification-application-area-value">65 – 120 м<sup>2</sup>/ч.</p>
+                          <p> <strong>Скорость фильтрации:</strong></p>
+                          <p class="specification-application-area-value">1 – 2 м/мин.</p>
+                          <p> <strong>Рабочая температура в фильтре:</strong></p>
+                          <p class="specification-application-area-value">40 – 290 <sup>0</sup>С.</p>
+                          <p> <strong>Концентрация пыли на выходе из фильтра:</strong></p>
+                          <p class="specification-application-area-value">не более 5 – 10 мг/м<sup>3</sup>.</p>
+                        </div>
+                      </div>
+
+                      <div class="card-application-area-filtr d-flex">
+                        <img class="image-application-area-filtr beton" src="./img/filters-cards-img/buran-beton.png" alt="buran">
+                        <p>РИТ-3</p>
+                        <button class="btn btn-application-area">Узнать цену</button>
+                      </div>
+                    </div>
+                    <img class="back-application-area back-beton" src="./img/Бетон.svg" alt="sdsd">
+                  </div>
+                </li>
+                <!-- ДЕРЕВОБРАБОТКА -->
+                <li>
+                  <div class="area d-flex">
+                    <div class="text-application-area">
+                      <h4>Циклоны для удаление средних и мелкодисперстных загрязнений</h4>
+                      <p>Универсальный циклон, применяется для очистки воздушных выбросов деревообрабатывающих производств от не волокнистых и не слипающихся типов пылей, в том числе для очистки воздуха от пыли со стружкой и сухими опилками.
+                        Пылеуловитель может поставляться в комплекте с зонтом или улиткой на выхлопной трубе – эти параметры определяются расположением вентилятора.
+                      </p>
+                    </div>
+
+                    <div class="info-application-area d-flex">
+                      <div class="specifications-application-area d-flex">
+                        <h4>Технические характеристики</h4>
+                        <div class="specifications-application-area__item">
+                          <p> <strong>Производительность:</strong></p>
+                          <p class="specification-application-area-value">960 –  1 210 м<sup>3</sup>/ч.</p>
+                          <p> <strong>Площадь фильтрации:</strong></p>
+                          <p class="specification-application-area-value">5 – 40 м<sup>2</sup>/ч.</p>
+                          <p> <strong>Скорость фильтрации:</strong></p>
+                          <p class="specification-application-area-value">1 – 2 м/мин.</p>
+                          <p> <strong>Рабочая температура в фильтре:</strong></p>
+                          <p class="specification-application-area-value">45 – 200 <sup>0</sup>С.</p>
+                          <p> <strong>Концентрация пыли на выходе из фильтра:</strong></p>
+                          <p class="specification-application-area-value">не более 5 – 10 мг/м<sup>3</sup>.</p>
+                        </div>
+                      </div>
+
+                      <div class="card-application-area-filtr d-flex">
+                        <img class="image-application-area-filtr derevo" src="./img/filters-cards-img/uc-ciklon-derevoobrabotka.png" alt="buran">
+                        <p>УЦ-5.6</p>
+                        <button class="btn btn-application-area">Узнать цену</button>
+                      </div>
+                    </div>
+                    <img class="back-application-area back-derevo" src="./img/Деревообработка.svg" alt="sdsd">
+                  </div>
+                </li>
+                <!-- ДОБЫЧА МИНЕРАЛОВ -->
+                <li>
+                  <div class="area d-flex">
+                    <div class="text-application-area">
+                      <h4>Скруббер для очистки нетоксичных и невзрывоопасных газов от частиц пыли, не склонных к образованию отложений.</h4>
+                      <p>
+                        Тарельчатый скруббер «Вертр ТТ» — предназначен для охлаждения и очистки газов от мелкодисперсных частиц пыли.
+                        Используется в различных отраслях промышленности, где целесообразна установка мокрых пылеуловителей, работающих при переменных расходах газа.
+                        Мокрый способ очистки позволяет с максимальной эффективностью удалить из газа ненужные элементы любого размера и состава.
+                      </p>
+                    </div>
+
+                    <div class="info-application-area d-flex">
+                      <div class="specifications-application-area d-flex">
+                        <h4>Технические характеристики</h4>
+                        <div class="specifications-application-area__item">
+                          <p> <strong>Производительность:</strong></p>
+                          <p class="specification-application-area-value">1 000 – 300 000 м<sup>3</sup>/ч.</p>
+                          <p> <strong>Площадь фильтрации:</strong></p>
+                          <p class="specification-application-area-value">20 – 500 м<sup>2</sup>/ч.</p>
+                          <p> <strong>Скорость фильтрации:</strong></p>
+                          <p class="specification-application-area-value">1 – 2 м/мин.</p>
+                          <p> <strong>Рабочая температура в фильтре:</strong></p>
+                          <p class="specification-application-area-value">40 – 280 <sup>0</sup>С.</p>
+                          <p> <strong>Концентрация пыли на выходе из фильтра:</strong></p>
+                          <p class="specification-application-area-value">не более 5 – 10 мг/м<sup>3</sup>.</p>
+                        </div>
+                      </div>
+
+                      <div class="card-application-area-filtr d-flex">
+                        <img class="image-application-area-filtr derevo" src="./img/filters-cards-img/skv-10000_vnutr-dobicha-mineralov.png" alt="buran">
+                        <p>Вертр ТТ</p>
+                        <button class="btn btn-application-area">Узнать цену</button>
+                      </div>
+                    </div>
+                    <img class="back-application-area back-dobicha" src="./img/Добычаминералов.svg" alt="sdsd">
+                  </div>
+                </li>
+                <!-- МЕТАЛЛУРГИЯ -->
+                <li>
+                  <div class="area d-flex">
+                    <div class="text-application-area">
+                      <h4>Высокой эффективность при очистке дымовых газов от пыли со средним размером частиц 1–2 мкм. Улавливает высокодисперсные частицы пыли в широком диапазоне.</h4>
+                      <p>Пылегазоочистка или газопромывка в «Самсоне» происходит путем конденсации частиц влаги,
+                        более тяжелых по массе на частицах пыли.
+                        В процессе совместного движения твердых частиц и капель воды происходит их коагуляция с последующим осаждением в каплеуловителе инерционного типа. Для обеспечения большей поверхности контакта жидкой и газовой фаз в «Самсоне» применяют форсуночное распыление жидкости.</p>
+                    </div>
+
+                    <div class="info-application-area d-flex">
+
+                      <div class="specifications-application-area d-flex">
+                        <h4>Технические характеристики</h4>
+                        <div class="specifications-application-area__item">
+                          <p> <strong>Производительность:</strong></p>
+                          <p class="specification-application-area-value">4 000 – 400 000 м<sup>3</sup>/ч.</p>
+                          <p> <strong>Площадь фильтрации:</strong></p>
+                          <p class="specification-application-area-value">50 – 600 м<sup>2</sup>/ч.</p>
+                          <p> <strong>Скорость фильтрации:</strong></p>
+                          <p class="specification-application-area-value">1 – 2 м/мин.</p>
+                          <p> <strong>Рабочая температура в фильтре:</strong></p>
+                          <p class="specification-application-area-value">40 – 340 <sup>0</sup>С.</p>
+                          <p> <strong>Концентрация пыли на выходе из фильтра:</strong></p>
+                          <p class="specification-application-area-value">не более 5 – 10 мг/м<sup>3</sup>.</p>
+                        </div>
+                      </div>
+
+                      <div class="card-application-area-filtr d-flex">
+                        <img class="image-application-area-filtr metallurg" src="./img/filters-cards-img/samun-chernaya-metallurgiya.png" alt="bur">
+                        <p>Комплекс Самсон</p>
+                        <button class="btn btn-application-area">Узнать цену</button>
+                      </div>
+
+                    </div>
+                    <img class="back-application-area back-metallurg" src="./img/Металлургия.svg" alt="sdsd">
+                  </div>
+                </li>
+                <!-- МЕТАЛЛООБРАБОТКА -->
+                <li>
+                  <div class="area d-flex">
+                    <div class="text-application-area">
+                      <h4>Шлифовальный и зачистной стол сварщика с системой вытяжки и самоочистки</h4>
+                      <p>Применяется в качестве сварочного поста. Стол предназначен для установки на нем изделий малых и средних размеров при проведении сварочных, шлифовальных, зачистных и прочих похожих работ с одновременным удалением газовой смеси и пыли.
+                        Вентиляционная система данной модели стола сварщика «Штерн 1А, оборудована одним или двумя встроенными фильтрами. Это позволяет увеличить степень очистки воздуха от вредных аэрозолей, пыли, выделяемых в процессе проведения сварочных работ.
+                        Стол можно использовать в помещениях, если на производстве нет оборудованных общецеховой (общезаводской) системой вентиляции. 
+                      </p>
+                    </div>
+
+                    <div class="info-application-area d-flex">
+
+                      <div class="specifications-application-area d-flex">
+                        <h4>Технические характеристики</h4>
+                        <div class="specifications-application-area__item">
+                          <p> <strong>Производительность:</strong></p>
+                          <p class="specification-application-area-value">1 000 – 3 000 м<sup>3</sup>/ч.</p>
+                          <p> <strong>Площадь фильтрации:</strong></p>
+                          <p class="specification-application-area-value">1,3 м<sup>2</sup>/ч.</p>
+                          <p> <strong>Скорость фильтрации:</strong></p>
+                          <p class="specification-application-area-value">1 – 3 м/мин.</p>
+                          <p> <strong>Рабочая температура в фильтре:</strong></p>
+                          <p class="specification-application-area-value">40 – 280 <sup>0</sup>С.</p>
+                          <p> <strong>Концентрация пыли на выходе из фильтра:</strong></p>
+                          <p class="specification-application-area-value">не более 5 – 10 мг/м<sup>3</sup>.</p>
+                        </div>
+                      </div>
+
+                      <div class="card-application-area-filtr d-flex">
+                        <img class="image-application-area-filtr metalloobrabotka" src="./img/filters-cards-img/svarochniy-stol-metaloobrabotka.png" alt="bur">
+                        <p>Штерн 1А</p>
+                        <button class="btn btn-application-area">Узнать цену</button>
+                      </div>
+                      
+                    </div>
+                    <img class="back-application-area back-metalloobrabotka" src="./img/Металлообработка.svg" alt="sdsd">
+                  </div>
+                </li>
+                <!-- ПИЩЕВАЯ ПРОМЫШЛЕННОСТЬ -->
+                <li>
+                  <div class="area d-flex">
+                    <div class="text-application-area">
+                        <h4>Фильтр обеспыливания транспортировочных механизмов </h4>
+                        <p>Фильтровальные установки «Грек-2» предназначены для обеспыливания различных транспортировочных механизмов, таких как конвейеры, нории, загрузочные воронки, бункеры, ленточные транспортеры и прочие транспортеры.
+                          Периодически фильтровальные рукава забиваются продуктом, который идет в газовом потоке, и рукава нужно очищать, чтобы производительность фильтрации не падала. Очистка рукавов происходит при помощи пневмоудара сжатым воздухом, обратной продувкой или вибрацией рукавов.
+                        </p>
+                    </div>
+  
+                    <div class="info-application-area d-flex">
+  
+                      <div class="specifications-application-area d-flex">
+                        <h4>Технические характеристики</h4>
+                        <div class="specifications-application-area__item">
+                          <p> <strong>Производительность:</strong></p>
+                          <p class="specification-application-area-value">400 – 1 000 м<sup>3</sup>/ч.</p>
+                          <p> <strong>Площадь фильтрации:</strong></p>
+                          <p class="specification-application-area-value">20 – 80 м<sup>2</sup>/ч.</p>
+                          <p> <strong>Скорость фильтрации:</strong></p>
+                          <p class="specification-application-area-value">1 – 2 м/мин.</p>
+                          <p> <strong>Рабочая температура в фильтре:</strong></p>
+                          <p class="specification-application-area-value">5 – 180 <sup>0</sup>С.</p>
+                          <p> <strong>Концентрация пыли на выходе из фильтра:</strong></p>
+                          <p class="specification-application-area-value">не более 5 – 10 мг/м<sup>3</sup>.</p>
+                        </div>
+                      </div>
+  
+                      <div class="card-application-area-filtr d-flex">
+                        <img class="image-application-area-filtr pishevayaprom" src="./img/filters-cards-img/ciklon-cm-pishevaya.png" alt="bur">
+                        <p>Грек-2</p>
+                        <button class="btn btn-application-area">Узнать цену</button>
+                      </div>
+                        
+                    </div>
+                    <img class="back-application-area back-pishevayaprom" src="./img/Пищевая-промышленность.svg" alt="sdsd">
+                  </div>
+                </li>
+                <!-- ПЛАЗМЕННАЯ РЕЗКА -->
+                <li>
+                  <div class="area d-flex">
+                    <div class="text-application-area">
+                        <h4>Большие и малые фильтры циклоны искрогасители</h4>
+                        <p>Горизонтальный циклон — искрогаситель предназначен для защиты рукавов рукавных фильтров от прожигания искрами, летящими в потоке очищаемого газа. Используйте циклон в качестве первой ступени очистки от крупной пыли и снижения пылевой нагрузки на рукавный фильтр.
+                          спользование смотровых лючков в воздуховодах позволяет проводить очистку и удобный осмотр искрогасителя и воздуховодов. 
+                        </p>
+                    </div>
+
+                    <div class="info-application-area d-flex">
+
+                      <div class="specifications-application-area d-flex">
+                        <h4>Технические характеристики</h4>
+                        <div class="specifications-application-area__item">
+                          <p> <strong>Производительность:</strong></p>
+                          <p class="specification-application-area-value">10 000 м<sup>3</sup>/ч.</p>
+                          <p> <strong>Площадь фильтрации:</strong></p>
+                          <p class="specification-application-area-value">8 м<sup>2</sup>/ч.</p>
+                          <p> <strong>Скорость фильтрации:</strong></p>
+                          <p class="specification-application-area-value">1 – 4 м/мин.</p>
+                          <p> <strong>Рабочая температура в фильтре:</strong></p>
+                          <p class="specification-application-area-value">80 – 380 <sup>0</sup>С.</p>
+                          <p> <strong>Концентрация пыли на выходе из фильтра:</strong></p>
+                          <p class="specification-application-area-value">не более 5 – 10 мг/м<sup>3</sup>.</p>
+                        </div>
+                      </div>
+
+                      <div class="card-application-area-filtr d-flex">
+                        <img class="image-application-area-filtr plazma" src="./img/filters-cards-img/iskra-gasitel-plazma.png" alt="bur">
+                        <p>ИГ-10</p>
+                        <button class="btn btn-application-area">Узнать цену</button>
+                      </div>
+
+                    </div>
+                    <img class="back-application-area back-plazma" src="./img/Плазменная-резка.svg" alt="sdsd">
+                  </div>
+                </li>
+                <!-- ФАРМАЦЕПТИКА -->
+                <li>
+                  <div class="area d-flex">
+                    <div class="text-application-area">
+                        <h4>Фильтровентиляционная установка серии «СОН» — одно из самых распространенных видов оборудования очистки в России.</h4>
+                        <p>
+                          Используется технология фильтрации через цилиндрические фильтрующие элементы, специальный патентованный фильтрующий материал и оригинальный процесс импульсной очистки для увеличения пропускной способности воздушного потока по сравнению с другими кассетными фильтрами того же размера.
+                          Очистка запыленных фильтровальных элементов осуществляется импульсом сжатого воздуха. Сжатый воздух из ресивера через электромагнитные клапаны поступает в продувочные трубки и далее в фильтровальные картриджи. Импульс сжатого воздуха сбивает пыль с наружной поверхности картриджа. Пыль, отряхиваемая с фильтровальных элементов осыпается в бункер и через устройство выгрузки удаляется из фильтра. 
+                        </p>
+                    </div>
+  
+                    <div class="info-application-area d-flex">
+  
+                      <div class="specifications-application-area d-flex">
+                        <h4>Технические характеристики</h4>
+                        <div class="specifications-application-area__item">
+                          <p> <strong>Производительность:</strong></p>
+                          <p class="specification-application-area-value">1 000 – 3 000 м<sup>3</sup>/ч.</p>
+                          <p> <strong>Площадь фильтрации:</strong></p>
+                          <p class="specification-application-area-value">10 – 60 м<sup>2</sup>/ч.</p>
+                          <p> <strong>Скорость фильтрации:</strong></p>
+                          <p class="specification-application-area-value">1 – 2 м/мин.</p>
+                          <p> <strong>Рабочая температура в фильтре:</strong></p>
+                          <p class="specification-application-area-value">5 – 120 <sup>0</sup>С.</p>
+                          <p> <strong>Концентрация пыли на выходе из фильтра:</strong></p>
+                          <p class="specification-application-area-value">не более 5 – 10 мг/м<sup>3</sup>.</p>
+                        </div>
+                      </div>
+  
+                      <div class="card-application-area-filtr d-flex">
+                        <img class="image-application-area-filtr pharma" src="./img/filters-cards-img/tri_filtr_fjon-pharma.png" alt="bur">
+                        <p>СОН-1</p>
+                        <button class="btn btn-application-area">Узнать цену</button>
+                      </div>
+                        
+                    </div>
+                    <img class="back-application-area back-pharma" src="./img/Фармацептика.svg" alt="sdsd">
+                  </div>
+                </li>
+                <!-- ХИМИЧЕСКАЯ ПРОМЫШЛЕННОСТЬ -->
+                <li>
+                  <div class="area d-flex">
+                    <div class="text-application-area">
+                      <h4>Очистка воздушным масляным фильтром от загрязнений до 99,7%</h4>
+                      <p>Серия воздушных масляных фильтров «ФРИ-МИН» предназначена для очистки воздуха от дыма, тумана и паров масла, а также различных эмульсий непосредственно у станков, где используется машинное масло. 
+                        Ему не требуется дополнительное место, можно повесить на стену или встроить в воздуховод. «ФРИ-МИН» — это самый маленький фильтр для масляной аэрозоли.
+                      </p>
+                    </div>
+  
+                    <div class="info-application-area d-flex">
+  
+                      <div class="specifications-application-area d-flex">
+                        <h4>Технические характеристики</h4>
+                        <div class="specifications-application-area__item">
+                          <p> <strong>Производительность:</strong></p>
+                          <p class="specification-application-area-value">500 м<sup>3</sup>/ч.</p>
+                          <p> <strong>Площадь фильтрации:</strong></p>
+                          <p class="specification-application-area-value">10 м<sup>2</sup>/ч.</p>
+                          <p> <strong>Скорость фильтрации:</strong></p>
+                          <p class="specification-application-area-value">1 – 2 м/мин.</p>
+                          <p> <strong>Рабочая температура в фильтре:</strong></p>
+                          <p class="specification-application-area-value">40 – 280 <sup>0</sup>С.</p>
+                          <p> <strong>Концентрация пыли на выходе из фильтра:</strong></p>
+                          <p class="specification-application-area-value">не более 5 – 10 мг/м<sup>3</sup>.</p>
+                        </div>
+                      </div>
+  
+                      <div class="card-application-area-filtr d-flex">
+                        <img class="image-application-area-filtr himprom" src="./img/filters-cards-img/maslennii-filter-himprom.png" alt="bur">
+                        <p>ФРИ-МИН</p>
+                        <button class="btn btn-application-area">Узнать цену</button>
+                      </div>
+                        
+                    </div>
+                    <img class="back-application-area back-himprom" src="./img/Химическая-промышленность.svg" alt="sdsd">
+                  </div>
+                </li>
+                <!-- ЭНЕРГЕТИЧЕСКАЯ ПРОМЫШЛЕННОСТЬ -->
+                <li>
+                  <div class="area d-flex">
+                    <div class="text-application-area">
+                      <h4>«Тайфун-Н» известен во всем мире уже более 50 лет и зарекомендовал себя как надежный очиститель от пыли и дыма.</h4>
+                      <p>Процесс мокрой очистки дымовых газов чисто механический, но этим методом возможно полное удаление всех примесей из газа. 
+                        Аппараты для промывки газов жидкостями носят название «скрубберы», «газопромыватели» или «мокрые пылеуловители» и бывают различного конструктивного исполнения. При мокрой пылегазоочистке может происходить извлечение из газа одного или несколько компонентов.
+                        Состоит из трубы Вентури, каплеуловителя, системы орошения и гидрозатвора, по желанию комплектуется вентилятором или дымососом, бассейном-накопителем и насосной станцией. Труба Вентури состоит из конфузора, горловины и диффузора и служит для коагуляции (укрупнения) пылевых частиц, содержащихся в очищаемых дымовых газах. Орошение трубы Вентури осуществляется с помощью форсунок. Корпус выполнен из стального листа.
+                      </p>
+                    </div>
+
+                    <div class="info-application-area d-flex">
+
+                      <div class="specifications-application-area d-flex">
+                        <h4>Технические характеристики</h4>
+                        <div class="specifications-application-area__item">
+                          <p> <strong>Производительность:</strong></p>
+                          <p class="specification-application-area-value">100 – 300 000 м<sup>3</sup>/ч.</p>
+                          <p> <strong>Площадь фильтрации:</strong></p>
+                          <p class="specification-application-area-value">20 – 600 м<sup>2</sup>/ч.</p>
+                          <p> <strong>Скорость фильтрации:</strong></p>
+                          <p class="specification-application-area-value">1 – 2 м/мин.</p>
+                          <p> <strong>Рабочая температура в фильтре:</strong></p>
+                          <p class="specification-application-area-value">5 – 180 <sup>0</sup>С.</p>
+                          <p> <strong>Концентрация пыли на выходе из фильтра:</strong></p>
+                          <p class="specification-application-area-value">не более 1 – 2 мг/м<sup>3</sup>.</p>
+                        </div>
+                      </div>
+
+                      <div class="card-application-area-filtr d-flex">
+                        <img class="image-application-area-filtr energyprom" src="./img/filters-cards-img/tornadopmenergetika.png" alt="bur">
+                        <p>Тайфун-Н</p>
+                        <button class="btn btn-application-area">Узнать цену</button>
+                      </div>
+
+                    </div>
+                    <img class="back-application-area back-energyprom" src="./img/Энергетическая-промышленность.svg" alt="sdsd">
+                  </div>
+                </li>
               </ul>
-            </section>
-          </div>
-        </div>
-
-        <div class="category_helmet d-flex">
-          <img src="./img/icon-helmet.svg" class="helmet" alt="helmet">
-          <div class="category_article">
-            <h3>Ремонт</h3>
-            <p>от 150 р за м2</p>
-            <section>
-              <ul>
-                <li>Капитальный ремонт</li>
-                <li>Ремонт в новостройке</li>
-                <li>Косметический ремонт</li>
-              </ul>
-            </section>
-          </div>
-        </div>
-
-        <div class="category_engineering_interiordesign">
-
-          <div class="d-flex">
-            <img src="./img/icon-pensil.svg" class="pencil" alt="pensil">
-            <div class="category_article">
-              <h3>Проектирование</h3>
-              <p>от 150 р за м2</p>
-            </div>
-          </div>
-
-          <div class="category_item d-flex">
-            <img src="./img/icon-roller.svg" class="roller" alt="roller">
-            <div class="category_article">
-              <h3>Дизайн интерьера</h3>
-              <p>от 150 р за м2</p>
             </div>
           </div>
         </div>
+
+
+        <div id="accordion" class="accordion d-flex">
+          <p class="sphere">Бетонные заводы</p>
+          <div>
+            <div class="accordion-area d-flex">
+              <h4>Рукавный фильтр для линии фасовки минерального порошка</h4>
+              <p>Рукавный фильтр РИТ-3 представляет собой корпус, имеющий боковую дверь для монтажа фильтр-элементов.
+                  Ввиду горизонтальной загрузки фильтровальных элементов, рукавные фильтры РИТ имеют  компактные габариты.
+                  Размеры устройства не требуют большого пространства с целью для обслуживания, ни с боковых сторон, ни над фильтром.
+                  Над дверьми фильтра, расположены блоки с импульсными, электромагнитными клапанами.
+                  Под корпусом фильтра установлен пирамидальный бункер без шнека. Дополнительные устройства пылевыгрузки можно монтировать к фланцу выгрузки из бункера.
+                </p>
+            </div>
+            <div class="accordion-techspecification d-flex">
+              <div class="specifications-application-area d-flex">
+                <h4>Технические характеристики</h4>
+                <div class="specifications-application-area__item">
+                  <p> <strong>Производительность:</strong></p>
+                  <p class="specification-application-area-value">6 000 – 10 000 м<sup>3</sup>/ч.</p>
+                  <p> <strong>Площадь фильтрации:</strong></p>
+                  <p class="specification-application-area-value">65 – 120 м<sup>2</sup>/ч.</p>
+                  <p> <strong>Скорость фильтрации:</strong></p>
+                  <p class="specification-application-area-value">1 – 2 м/мин.</p>
+                  <p> <strong>Рабочая температура в фильтре:</strong></p>
+                  <p class="specification-application-area-value">40 – 290 <sup>0</sup>С.</p>
+                  <p> <strong>Концентрация пыли на выходе из фильтра:</strong></p>
+                  <p class="specification-application-area-value">не более 5 – 10 мг/м<sup>3</sup>.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-imgfilter d-flex">
+              <div class="card-application-area-filtr d-flex">
+                <img class="image-application-area-filtr derevo" src="./img/filters-cards-img/buran-beton.png" alt="buran">
+                <p>РИТ-3</p>
+                <button class="btn btn-application-area">Узнать цену</button>
+              </div>
+            </div>
+          </div>
+
+
+          <p class="sphere">Деревообработка</p>
+          <div>
+            <div class="accordion-area d-flex">
+              <h4>Рукавный фильтр для линии фасовки минерального порошка</h4>
+              <p>Универсальный циклон, применяется для очистки воздушных выбросов деревообрабатывающих производств от не волокнистых и не слипающихся типов пылей, в том числе для очистки воздуха от пыли со стружкой и сухими опилками.
+                Пылеуловитель может поставляться в комплекте с зонтом или улиткой на выхлопной трубе – эти параметры определяются расположением вентилятора.
+              </p>
+            </div>
+            <div class="accordion-techspecification d-flex">
+              <div class="specifications-application-area d-flex">
+                <h4>Технические характеристики</h4>
+                <div class="specifications-application-area__item">
+                  <p> <strong>Производительность:</strong></p>
+                  <p class="specification-application-area-value">960 –  1 210 м<sup>3</sup>/ч.</p>
+                  <p> <strong>Площадь фильтрации:</strong></p>
+                  <p class="specification-application-area-value">5 – 40 м<sup>2</sup>/ч.</p>
+                  <p> <strong>Скорость фильтрации:</strong></p>
+                  <p class="specification-application-area-value">1 – 2 м/мин.</p>
+                  <p> <strong>Рабочая температура в фильтре:</strong></p>
+                  <p class="specification-application-area-value">45 – 200 <sup>0</sup>С.</p>
+                  <p> <strong>Концентрация пыли на выходе из фильтра:</strong></p>
+                  <p class="specification-application-area-value">не более 5 – 10 мг/м<sup>3</sup>.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-imgfilter d-flex">
+              <div class="card-application-area-filtr d-flex">
+                <img class="image-application-area-filtr derevo" src="./img/filters-cards-img/uc-ciklon-derevoobrabotka.png" alt="buran">
+                <p>УЦ-5.6</p>
+                <button class="btn btn-application-area">Узнать цену</button>
+              </div>
+            </div>
+          </div>
+
+          <p class="sphere">Добыча минералов</p>
+          <div>
+            <div class="accordion-area d-flex">
+              <h4>Рукавный фильтр для линии фасовки минерального порошка</h4>
+              <p>Тарельчатый скруббер «Вертр ТТ» — предназначен для охлаждения и очистки газов от мелкодисперсных частиц пыли.
+                  Используется в различных отраслях промышленности, где целесообразна установка мокрых пылеуловителей, работающих при переменных расходах газа.
+                  Мокрый способ очистки позволяет с максимальной эффективностью удалить из газа ненужные элементы любого размера и состава.
+              </p>
+            </div>
+            <div class="accordion-techspecification d-flex">
+              <div class="specifications-application-area d-flex">
+                <h4>Технические характеристики</h4>
+                <div class="specifications-application-area__item">
+                  <p> <strong>Производительность:</strong></p>
+                  <p class="specification-application-area-value">1 000 – 300 000 м<sup>3</sup>/ч.</p>
+                  <p> <strong>Площадь фильтрации:</strong></p>
+                  <p class="specification-application-area-value">20 – 500 м<sup>2</sup>/ч.</p>
+                  <p> <strong>Скорость фильтрации:</strong></p>
+                  <p class="specification-application-area-value">1 – 2 м/мин.</p>
+                  <p> <strong>Рабочая температура в фильтре:</strong></p>
+                  <p class="specification-application-area-value">40 – 280 <sup>0</sup>С.</p>
+                  <p> <strong>Концентрация пыли на выходе из фильтра:</strong></p>
+                  <p class="specification-application-area-value">не более 5 – 10 мг/м<sup>3</sup>.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-imgfilter d-flex">
+              <div class="card-application-area-filtr d-flex">
+                <img class="image-application-area-filtr derevo" src="./img/filters-cards-img/skv-10000_vnutr-dobicha-mineralov.png" alt="buran">
+                <p>Вертр ТТ</p>
+                <button class="btn btn-application-area">Узнать цену</button>
+              </div>
+            </div>
+          </div>
+
+          <p class="sphere">Металлургия</p>
+          <div>
+            <div class="accordion-area d-flex">
+              <h4>Высокой эффективность при очистке дымовых газов от пыли со средним размером частиц 1–2 мкм. Улавливает высокодисперсные частицы пыли в широком диапазоне.</h4>
+              <p>Пылегазоочистка или газопромывка в «Самсоне» происходит путем конденсации частиц влаги,
+                  более тяжелых по массе на частицах пыли.
+                  В процессе совместного движения твердых частиц и капель воды происходит их коагуляция с последующим осаждением в каплеуловителе инерционного типа. Для обеспечения большей поверхности контакта жидкой и газовой фаз в «Самсоне» применяют форсуночное распыление жидкости.</p>
+            </div>
+            <div class="accordion-techspecification d-flex">
+              <div class="specifications-application-area d-flex">
+                <h4>Технические характеристики</h4>
+                <div class="specifications-application-area__item">
+                  <p> <strong>Производительность:</strong></p>
+                  <p class="specification-application-area-value">4 000 – 400 000 м<sup>3</sup>/ч.</p>
+                  <p> <strong>Площадь фильтрации:</strong></p>
+                  <p class="specification-application-area-value">50 – 600 м<sup>2</sup>/ч.</p>
+                  <p> <strong>Скорость фильтрации:</strong></p>
+                  <p class="specification-application-area-value">1 – 2 м/мин.</p>
+                  <p> <strong>Рабочая температура в фильтре:</strong></p>
+                  <p class="specification-application-area-value">40 – 320 <sup>0</sup>С.</p>
+                  <p> <strong>Концентрация пыли на выходе из фильтра:</strong></p>
+                  <p class="specification-application-area-value">не более 5 – 10 мг/м<sup>3</sup>.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-imgfilter d-flex">
+              <div class="card-application-area-filtr d-flex">
+                <img class="image-application-area-filtr derevo" src="./img/filters-cards-img/samun-chernaya-metallurgiya.png" alt="buran">
+                <p>Комплекс Самсон</p>
+                <button class="btn btn-application-area">Узнать цену</button>
+              </div>
+            </div>
+          </div>
+
+          <p class="sphere">Металлообработка</p>
+          <div>
+            <div class="accordion-area d-flex">
+              <h4>Шлифовальный и зачистной стол сварщика с системой вытяжки и самоочистки</h4>
+              <p>Применяется в качестве сварочного поста. Стол предназначен для установки на нем изделий малых и средних размеров при проведении сварочных, шлифовальных, зачистных и прочих похожих работ с одновременным удалением газовой смеси и пыли.
+                Вентиляционная система данной модели стола сварщика «Штерн 1А, оборудована одним или двумя встроенными фильтрами. Это позволяет увеличить степень очистки воздуха от вредных аэрозолей, пыли, выделяемых в процессе проведения сварочных работ.
+                Стол можно использовать в помещениях, если на производстве нет оборудованных общецеховой (общезаводской) системой вентиляции. 
+              </p>
+            </div>
+            <div class="accordion-techspecification d-flex">
+              <div class="specifications-application-area d-flex">
+                <h4>Технические характеристики</h4>
+                <div class="specifications-application-area__item">
+                  <p> <strong>Производительность:</strong></p>
+                  <p class="specification-application-area-value">1 000 – 3 000 м<sup>3</sup>/ч.</p>
+                  <p> <strong>Площадь фильтрации:</strong></p>
+                  <p class="specification-application-area-value">1,3 м<sup>2</sup>/ч.</p>
+                  <p> <strong>Скорость фильтрации:</strong></p>
+                  <p class="specification-application-area-value">1 – 3 м/мин.</p>
+                  <p> <strong>Рабочая температура в фильтре:</strong></p>
+                  <p class="specification-application-area-value">40 – 280 <sup>0</sup>С.</p>
+                  <p> <strong>Концентрация пыли на выходе из фильтра:</strong></p>
+                  <p class="specification-application-area-value">не более 5 – 10 мг/м<sup>3</sup>.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-imgfilter d-flex">
+              <div class="card-application-area-filtr d-flex">
+                <img class="image-application-area-filtr derevo" src="./img/filters-cards-img/svarochniy-stol-metaloobrabotka.png" alt="buran">
+                <p>Штерн 1А</p>
+                <button class="btn btn-application-area">Узнать цену</button>
+              </div>
+            </div>
+          </div>
+
+          <p class="sphere">Пищевая промышленность</p>
+          <div>
+            <div class="accordion-area d-flex">
+              <h4>Фильтр обеспыливания транспортировочных механизмов</h4>
+              <p>Фильтровальные установки «Грек-2» предназначены для обеспыливания различных транспортировочных механизмов, таких как конвейеры, нории, загрузочные воронки, бункеры, ленточные транспортеры и прочие транспортеры.
+                  Периодически фильтровальные рукава забиваются продуктом, который идет в газовом потоке, и рукава нужно очищать, чтобы производительность фильтрации не падала. Очистка рукавов происходит при помощи пневмоудара сжатым воздухом, обратной продувкой или вибрацией рукавов.</p>
+            </div>
+            <div class="accordion-techspecification d-flex">
+              <div class="specifications-application-area d-flex">
+                <h4>Технические характеристики</h4>
+                <div class="specifications-application-area__item">
+                  <p> <strong>Производительность:</strong></p>
+                  <p class="specification-application-area-value">400 – 1 000 м<sup>3</sup>/ч.</p>
+                  <p> <strong>Площадь фильтрации:</strong></p>
+                  <p class="specification-application-area-value">20 – 80 м<sup>2</sup>/ч.</p>
+                  <p> <strong>Скорость фильтрации:</strong></p>
+                  <p class="specification-application-area-value">1 – 2 м/мин.</p>
+                  <p> <strong>Рабочая температура в фильтре:</strong></p>
+                  <p class="specification-application-area-value">5 – 180 <sup>0</sup>С.</p>
+                  <p> <strong>Концентрация пыли на выходе из фильтра:</strong></p>
+                  <p class="specification-application-area-value">не более 5 – 10 мг/м<sup>3</sup>.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-imgfilter d-flex">
+              <div class="card-application-area-filtr d-flex">
+                <img class="image-application-area-filtr derevo" src="./img/filters-cards-img/ciklon-cm-pishevaya.png" alt="buran">
+                <p>Грек-2</p>
+                <button class="btn btn-application-area">Узнать цену</button>
+              </div>
+            </div>
+          </div>
+
+          <p class="sphere">Плазменная резка</p>
+          <div>
+            <div class="accordion-area d-flex">
+              <h4>Большие и малые фильтры циклоны искрогасители</h4>
+              <p>Горизонтальный циклон — искрогаситель предназначен для защиты рукавов рукавных фильтров от прожигания искрами, летящими в потоке очищаемого газа. Используйте циклон в качестве первой ступени очистки от крупной пыли и снижения пылевой нагрузки на рукавный фильтр.
+                спользование смотровых лючков в воздуховодах позволяет проводить очистку и удобный осмотр искрогасителя и воздуховодов. </p>
+            </div>
+            <div class="accordion-techspecification d-flex">
+              <div class="specifications-application-area d-flex">
+                <h4>Технические характеристики</h4>
+                <div class="specifications-application-area__item">
+                  <p> <strong>Производительность:</strong></p>
+                  <p class="specification-application-area-value">10 000 м<sup>3</sup>/ч.</p>
+                  <p> <strong>Площадь фильтрации:</strong></p>
+                  <p class="specification-application-area-value">8 м<sup>2</sup>/ч.</p>
+                  <p> <strong>Скорость фильтрации:</strong></p>
+                  <p class="specification-application-area-value">1 – 4 м/мин.</p>
+                  <p> <strong>Рабочая температура в фильтре:</strong></p>
+                  <p class="specification-application-area-value">80 – 380 <sup>0</sup>С.</p>
+                  <p> <strong>Концентрация пыли на выходе из фильтра:</strong></p>
+                  <p class="specification-application-area-value">не более 5 – 10 мг/м<sup>3</sup>.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-imgfilter d-flex">
+              <div class="card-application-area-filtr d-flex">
+                <img class="image-application-area-filtr derevo" src="./img/filters-cards-img/iskra-gasitel-plazma.png" alt="buran">
+                <p>ИГ-10</p>
+                <button class="btn btn-application-area">Узнать цену</button>
+              </div>
+            </div>
+          </div>
+
+          <p class="sphere">Фармацептика</p>
+          <div>
+            <div class="accordion-area d-flex">
+              <h4>Фильтровентиляционная установка серии «СОН» — одно из самых распространенных видов оборудования очистки в России.</h4>
+              <p>Используется технология фильтрации через цилиндрические фильтрующие элементы, специальный патентованный фильтрующий материал и оригинальный процесс импульсной очистки для увеличения пропускной способности воздушного потока по сравнению с другими кассетными фильтрами того же размера.
+                Очистка запыленных фильтровальных элементов осуществляется импульсом сжатого воздуха. Сжатый воздух из ресивера через электромагнитные клапаны поступает в продувочные трубки и далее в фильтровальные картриджи. Импульс сжатого воздуха сбивает пыль с наружной поверхности картриджа. Пыль, отряхиваемая с фильтровальных элементов осыпается в бункер и через устройство выгрузки удаляется из фильтра. 
+              </p>
+            </div>
+            <div class="accordion-techspecification d-flex">
+              <div class="specifications-application-area d-flex">
+                <h4>Технические характеристики</h4>
+                <div class="specifications-application-area__item">
+                  <p> <strong>Производительность:</strong></p>
+                  <p class="specification-application-area-value">1 000 – 3 000 м<sup>3</sup>/ч.</p>
+                  <p> <strong>Площадь фильтрации:</strong></p>
+                  <p class="specification-application-area-value">10 – 60 м<sup>2</sup>/ч.</p>
+                  <p> <strong>Скорость фильтрации:</strong></p>
+                  <p class="specification-application-area-value">1 – 2 м/мин.</p>
+                  <p> <strong>Рабочая температура в фильтре:</strong></p>
+                  <p class="specification-application-area-value">5 – 120 <sup>0</sup>С.</p>
+                  <p> <strong>Концентрация пыли на выходе из фильтра:</strong></p>
+                  <p class="specification-application-area-value">не более 5 – 10 мг/м<sup>3</sup>.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-imgfilter d-flex">
+              <div class="card-application-area-filtr d-flex">
+                <img class="image-application-area-filtr derevo" src="./img/filters-cards-img/tri_filtr_fjon-pharma.png" alt="buran">
+                <p>СОН-1</p>
+                <button class="btn btn-application-area">Узнать цену</button>
+              </div>
+            </div>
+          </div>
+
+          <p class="sphere">Химическая промышленность</p>
+          <div>
+            <div class="accordion-area d-flex">
+              <h4>Очистка воздушным масляным фильтром от загрязнений до 99,7%</h4>
+              <p>Серия воздушных масляных фильтров «ФРИ-МИН» предназначена для очистки воздуха от дыма, тумана и паров масла, а также различных эмульсий непосредственно у станков, где используется машинное масло. 
+                Ему не требуется дополнительное место, можно повесить на стену или встроить в воздуховод. «ФРИ-МИН» — это самый маленький фильтр для масляной аэрозоли.</p>
+            </div>
+            <div class="accordion-techspecification d-flex">
+              <div class="specifications-application-area d-flex">
+                <h4>Технические характеристики</h4>
+                <div class="specifications-application-area__item">
+                  <p> <strong>Производительность:</strong></p>
+                  <p class="specification-application-area-value">500 м<sup>3</sup>/ч.</p>
+                  <p> <strong>Площадь фильтрации:</strong></p>
+                  <p class="specification-application-area-value">10 м<sup>2</sup>/ч.</p>
+                  <p> <strong>Скорость фильтрации:</strong></p>
+                  <p class="specification-application-area-value">1 – 2 м/мин.</p>
+                  <p> <strong>Рабочая температура в фильтре:</strong></p>
+                  <p class="specification-application-area-value">40 – 280 <sup>0</sup>С.</p>
+                  <p> <strong>Концентрация пыли на выходе из фильтра:</strong></p>
+                  <p class="specification-application-area-value">не более 5 – 10 мг/м<sup>3</sup>.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-imgfilter d-flex">
+              <div class="card-application-area-filtr d-flex">
+                <img class="image-application-area-filtr derevo" src="./img/filters-cards-img/maslennii-filter-himprom.png" alt="buran">
+                <p>ФРИ-МИН</p>
+                <button class="btn btn-application-area">Узнать цену</button>
+              </div>
+            </div>
+          </div>
+
+          <p class="sphere">Энергетическая промышленность</p>
+          <div>
+            <div class="accordion-area d-flex">
+              <h4>«Тайфун-Н» известен во всем мире уже более 50 лет и зарекомендовал себя как надежный очиститель от пыли и дыма.</h4>
+              <p>Процесс мокрой очистки дымовых газов чисто механический, но этим методом возможно полное удаление всех примесей из газа. 
+                Аппараты для промывки газов жидкостями носят название «скрубберы», «газопромыватели» или «мокрые пылеуловители» и бывают различного конструктивного исполнения. При мокрой пылегазоочистке может происходить извлечение из газа одного или несколько компонентов.
+                Состоит из трубы Вентури, каплеуловителя, системы орошения и гидрозатвора, по желанию комплектуется вентилятором или дымососом, бассейном-накопителем и насосной станцией. Труба Вентури состоит из конфузора, горловины и диффузора и служит для коагуляции (укрупнения) пылевых частиц, содержащихся в очищаемых дымовых газах. Орошение трубы Вентури осуществляется с помощью форсунок. Корпус выполнен из стального листа.
+              </p>
+            </div>
+            <div class="accordion-techspecification d-flex">
+              <div class="specifications-application-area d-flex">
+                <h4>Технические характеристики</h4>
+                <div class="specifications-application-area__item">
+                  <p> <strong>Производительность:</strong></p>
+                  <p class="specification-application-area-value">100 – 300 000 м<sup>3</sup>/ч.</p>
+                  <p> <strong>Площадь фильтрации:</strong></p>
+                  <p class="specification-application-area-value">20 – 60 м<sup>2</sup>/ч.</p>
+                  <p> <strong>Скорость фильтрации:</strong></p>
+                  <p class="specification-application-area-value">1 – 2 м/мин.</p>
+                  <p> <strong>Рабочая температура в фильтре:</strong></p>
+                  <p class="specification-application-area-value">5 – 180 <sup>0</sup>С.</p>
+                  <p> <strong>Концентрация пыли на выходе из фильтра:</strong></p>
+                  <p class="specification-application-area-value">не более 5 – 10 мг/м<sup>3</sup>.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-imgfilter d-flex">
+              <div class="card-application-area-filtr d-flex">
+                <img class="image-application-area-filtr energy" src="./img/filters-cards-img/tornadopmenergetika.png" alt="energy">
+                <p>Тайфун-Н</p>
+                <button class="btn btn-application-area">Узнать цену</button>
+              </div>
+            </div>
+          </div>
+
+
+
+
+        </div>
+
+
 
       </div>
     </div>
-    <!-- НАЧАЛО КОНТЕЙНЕРА ЗАЯВОК -->
-    <div class="container_request d-flex">
-
-      <div class="container_request_top d-flex">
-        <h2>Новые заявки</h2>
-        
-        <div class="switch_request d-flex">
-
-            <div class="switch-field d-fex">
-              <input type="radio" id="switch_3_left" name="switch_3" value="yes" checked/>
-              <label for="switch_3_left">Строительство</label>
-              <input type="radio" id="switch_3_center" name="switch_3" value="maybe" />
-              <label for="switch_3_center">Ремонт</label>
-              <input type="radio" id="switch_3_right" name="switch_3" value="no" />
-              <label for="switch_3_right">Проектирование</label>
+    <!-- АНИМАЦИЯ ОБЛАКОВ -->
+    <div class="tube-animation container d-flex">
+      <img class="tube" src="./img/tube-cloude.png" alt="tube">
+      <div class="cloudes d-flex">
+        <div class="cloude1"></div>
+        <div class="cloude2"></div>
+      </div>
+    </div>
+    <!-- О НАС С ЦИФРАМИ С ПИСЬМАМИ БЛАГОДАРНОСТИ-->
+    <div class="about-us container d-flex">
+      <div class="wrapper about d-flex">
+        <div class="block-about-us d-flex" data-sal-duration="1400" data-sal="slide-right" data-sal-delay="100" data-sal-easing="ease-out-bounce">
+          <h3>Мы в цифрах</h3>
+          <div class="block-numbers d-flex">
+            <div class="block-numbers_item d-flex">
+              <span>>9</span>
+              <div class="nnn">
+                <p>Лет на<br> рынке</p>
+                <svg width="135px" height="92px" viewBox="0 0 135 92" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <path d="M29.2226563,34.2929688 C38.4570313,15.0507813 66.9804688,0.8046875 79.0898438,0.8046875 C91.1992188,0.8046875 104.808594,0.8046875 117.886719,0.8046875 C130.964844,0.8046875 147.472656,6.67578125 117.886719,34.2929688 C88.3007813,61.9101562 116.527344,62.3164062 79.0898438,79.0195313 C41.6523437,95.7226563 -4.1796875,96.6523438 1.171875,79.0195313 C6.5234375,61.3867187 19.9882813,53.5351563 29.2226563,34.2929688 Z" id="Path" fill="#73D2D2" fill-rule="nonzero"></path>
+                  </g>
+                </svg>
+              </div>
             </div>
 
+            <div class="block-numbers_item d-flex">
+              <span>967</span>
+              <div class="nnn">
+                <p>Установок<br> изготовлено</p>
+                <svg width="135px" height="92px" viewBox="0 0 135 92" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <path d="M29.2226563,34.2929688 C38.4570313,15.0507813 66.9804688,0.8046875 79.0898438,0.8046875 C91.1992188,0.8046875 104.808594,0.8046875 117.886719,0.8046875 C130.964844,0.8046875 147.472656,6.67578125 117.886719,34.2929688 C88.3007813,61.9101562 116.527344,62.3164062 79.0898438,79.0195313 C41.6523437,95.7226563 -4.1796875,96.6523438 1.171875,79.0195313 C6.5234375,61.3867187 19.9882813,53.5351563 29.2226563,34.2929688 Z" id="Path" fill="#73D2D2" fill-rule="nonzero"></path>
+                  </g>
+                </svg>
+              </div>
+
+            </div>
+
+            <div class="block-numbers_item d-flex">
+              <span>32</span>
+              <div class="nnn">
+                <p>Дня на<br> изготавление</p>
+                <svg width="135px" height="92px" viewBox="0 0 135 92" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <path d="M29.2226563,34.2929688 C38.4570313,15.0507813 66.9804688,0.8046875 79.0898438,0.8046875 C91.1992188,0.8046875 104.808594,0.8046875 117.886719,0.8046875 C130.964844,0.8046875 147.472656,6.67578125 117.886719,34.2929688 C88.3007813,61.9101562 116.527344,62.3164062 79.0898438,79.0195313 C41.6523437,95.7226563 -4.1796875,96.6523438 1.171875,79.0195313 C6.5234375,61.3867187 19.9882813,53.5351563 29.2226563,34.2929688 Z" id="Path" fill="#73D2D2" fill-rule="nonzero"></path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+
+            <div class="block-numbers_item d-flex">
+              <span>294</span>
+              <div class="nnn">
+                <p>Постоянных<br> клиента</p>
+                <svg width="135px" height="92px" viewBox="0 0 135 92" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <path d="M29.2226563,34.2929688 C38.4570313,15.0507813 66.9804688,0.8046875 79.0898438,0.8046875 C91.1992188,0.8046875 104.808594,0.8046875 117.886719,0.8046875 C130.964844,0.8046875 147.472656,6.67578125 117.886719,34.2929688 C88.3007813,61.9101562 116.527344,62.3164062 79.0898438,79.0195313 C41.6523437,95.7226563 -4.1796875,96.6523438 1.171875,79.0195313 C6.5234375,61.3867187 19.9882813,53.5351563 29.2226563,34.2929688 Z" id="Path" fill="#73D2D2" fill-rule="nonzero"></path>
+                  </g>
+                </svg>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+        <div class="block-thenks d-flex" data-sal-duration="1400" data-sal="slide-left" data-sal-delay="100" data-sal-easing="ease-out-bounce">
+          <div class="block-thenks_item d-flex">
+            <h3>Письма благодарности</h3>
+            <!-- <div class="prev"></div> -->
+            <div class="sends-thenks d-flex">
+              <div class="my-slider">
+                <div class="my-slider_item">
+                  <img src="./img/БЛАГОДАРНОСТЬ.jpg" alt="thenks">
+                </div>
+                <div class="my-slider_item">
+                  <img src="./img/БЛАГОДАРНОСТЬ.jpg" alt="thenks">
+                </div>
+                <div class="my-slider_item">
+                  <img src="./img/БЛАГОДАРНОСТЬ.jpg" alt="thenks">
+                </div>
+              </div>
+
+              <!-- <img src="./img/БЛАГОДАРНОСТЬ.jpg" alt="thenks"> -->
+            </div>
+          </div>
         </div>
       </div>
-
-      <div class="container_request_main d-flex">
-        
-        <div class="request_main_item accept unlock d-flex">
-
-          <div class="status_bar d-flex">
-
-            <div class="status_bar_left d-flex">
-              <div class="bar_accept_request d-flex">Идет прием заявок</div>
-              <div class="bar_noaccept_request d-flex">Прием заявок завершон</div>
-
-
-              <div class="bar_progect d-flex">
-                <img src="./img/have-progect.svg" alt="have-progect">
-                <p>Есть проект</p>
-              </div>
-
-              <div class="bar_unlock_tender d-flex">
-                <img src="./img/icon-unlock.svg" alt="unlock">
-                <p>Открытый тендер</p>
-              </div>
-
-              <div class="bar_lock_tender d-flex">
-                <img src="./img/icon-lock.svg" alt="unlock">
-                <p>Закрытый тендер</p>
-              </div>
-
-
-              <div class="bar_view d-flex">
-                <img src="./img/icon-eye.svg" alt="view">
-                <p>211</p>
-              </div>
-            </div>
-
-            <span class="bar_onlypro">
-              Только
-              <span>PRO</span>
-            </span>
-
+    </div>
+    <!-- ЧТО МЫ ДАЕМ -->
+    <div class="what-give container d-flex">
+      <div class="wrapper give d-flex">
+        <h2>Что вы получите от нашего оборудования:</h2>
+        <div class="block_give ">
+          <div class="give_item d-flex">
+            <p class="title-give">Забудьте про штрафы</p>
+            <img class="verif" src="./img/ПРОВЕРЕНО.png" alt="efe">
+            <p>Избавьтесь от угрозы наложения штрафов от 50 000 до 600 000 рублей. Наши фильтры гарантируют прохождение проверок контролирующих органов</p>
           </div>
-
-          <div class="name_bar d-flex">
-
-            <div class="bar_name_tender">
-              <h3>Строительство теплого контура</h3>
-            </div>
-
-            <div class="bar_cost">
-              <span>2 000 000 – 2 400 000</span>
-              руб.
-            </div>
-
+          <div class="give_item d-flex">
+            <p class="title-give">Без форсмажоров</p>
+            <!-- <img src="./img/tube-cloude.png" alt="efe"> -->
+            <p>Снижайте риски аварийных остановок производственного оборудования из-за загрязненного воздуха или наложения санкций от экологов</p>
           </div>
-
-          <div class="tender_info d-flex">
-
-            <div class="info_item">
-              <div class="item_title">Технология:</div>
-              <div class="item_text">Каркасная</div>
-            </div>
-
-            <div class="info_item">
-              <div class="item_title">Площадь дома:</div>
-              <div class="item_text">98 м2</div>
-            </div>
-
-            <div class="info_item">
-              <div class="item_title">Адрес объекта:</div>
-              <div class="item_text">Московская обл., пос. Зеленая долина</div>
-            </div>
-
+          <div class="give_item d-flex" data-sal-duration="1400" data-sal="slide-left" data-sal-delay="100" data-sal-easing="ease-out-bounce">
+            <p class="title-give">Без неожиданных поломок</p>
+            <img class="remont" src="./img/РЕМОНТ.png" alt="efe">
+            <p>Экономьте на ремонте своего оборудования. Фильтр сводит к нулю износ, вызванный запыленностью</p>
           </div>
-
-          <div class="time_info d-flex">
-
-            <div class="time_open">
-
-              <div class="item_title">Опубликовано:</div>
-
-              <div class="item_data">
-                <img src="./img/icon-calendar.svg" alt="calendar">
-                <span>13.02.2018</span>
-              </div>
-
-            </div>
-
-            <div class="time_close">
-
-              <div class="item_title">Прием заявок до:</div>
-  
-              <div class="item_data">
-                <img src="./img/icon-calendar.svg" alt="calendar">
-                <span>13.03.2018</span>
-              </div>
-  
-            </div>
-
-            <div class="master_tender d-flex">
-              <img src="./img/icon-master-tender.png" class="icon_master_tender" alt="master tender">
-              
-              <div class="master_tender_info">
-                <span class="status_master_tender">Заказчик:</span> </br>
-                <span class="name_master_tender">Иван Иванов</span>
-              </div>
-            </div>
-
+          <div class="give_item d-flex" data-sal-duration="1400" data-sal="slide-right" data-sal-delay="100" data-sal-easing="ease-out-bounce">
+            <p class="title-give">Без переплат</p>
+            <img class="moneybox" src="./img/ЭКОНОМИЯ.png" alt="efe">
+            <p>Получите выгодный отечественный аналог дорогих импортных установок по лучшей цене</p>
           </div>
-
+          <div class="give_item d-flex">
+            <p>Не нашли, что искали? Подберем именно под вас, обращайтесь!</p>
+            <img class="arrow-dinamik" src="./img/СТРЕЛКА.png" alt="efe">
+          </div>
+          <div class="give_item d-flex">
+            <p class="title-give">Давольные сотрудники</p>
+            <!-- <img src="./img/tube-cloude.png" alt="efe"> -->
+            <p>Уменьшайте текучку кадров, улучшая условия труда</p>
+          </div>
+          <div class="give_item d-flex">
+            <p class="title-give">Забота о здоровье</p>
+            <!-- <img src="./img/tube-cloude.png" alt="efe"> -->
+            <p>Снижайте выплаты сотрудникам за вредность и больничные</p>
+          </div>
         </div>
-
-        <div class="request_main_item noaccept progectno lock nopro d-flex">
-
-            <div class="status_bar d-flex">
-  
-              <div class="status_bar_left d-flex">
-                <div class="bar_accept_request d-flex">Идет прием заявок</div>
-                <div class="bar_noaccept_request d-flex">Прием заявок завершон</div>
-  
-  
-                <div class="bar_progect d-flex">
-                  <img src="./img/have-progect.svg" alt="have-progect">
-                  <p>Есть проект</p>
-                </div>
-  
-                <div class="bar_unlock_tender d-flex">
-                  <img src="./img/icon-unlock.svg" alt="unlock">
-                  <p>Открытый тендер</p>
-                </div>
-  
-                <div class="bar_lock_tender d-flex">
-                  <img src="./img/icon-lock.svg" alt="unlock">
-                  <p>Закрытый тендер</p>
-                </div>
-  
-  
-                <div class="bar_view d-flex">
-                  <img src="./img/icon-eye.svg" alt="view">
-                  <p>211</p>
-                </div>
-              </div>
-  
-              <span class="bar_onlypro">
-                Только
-                <span>PRO</span>
-              </span>
-  
-            </div>
-  
-            <div class="name_bar d-flex">
-  
-              <div class="bar_name_tender">
-                <h3>Строительство теплого контура</h3>
-              </div>
-  
-              <div class="bar_cost">
-                <span>2 000 000 – 2 400 000</span>
-                руб.
-              </div>
-  
-            </div>
-  
-            <div class="tender_info d-flex">
-  
-              <div class="info_item">
-                <div class="item_title">Технология:</div>
-                <div class="item_text">Каркасная</div>
-              </div>
-  
-              <div class="info_item">
-                <div class="item_title">Площадь дома:</div>
-                <div class="item_text">98 м2</div>
-              </div>
-  
-              <div class="info_item">
-                <div class="item_title">Адрес объекта:</div>
-                <div class="item_text">Московская обл., пос. Зеленая долина</div>
-              </div>
-  
-            </div>
-  
-            <div class="time_info d-flex">
-  
-              <div class="time_open">
-  
-                <div class="item_title">Опубликовано:</div>
-  
-                <div class="item_data">
-                  <img src="./img/icon-calendar.svg" alt="calendar">
-                  <span>13.02.2018</span>
-                </div>
-  
-              </div>
-  
-              <div class="time_close">
-  
-                <div class="item_title">Прием заявок до:</div>
-    
-                <div class="item_data">
-                  <img src="./img/icon-calendar.svg" alt="calendar">
-                  <span>13.03.2018</span>
-                </div>
-    
-              </div>
-  
-              <div class="master_tender d-flex">
-                <img src="./img/icon-master-tender.png" class="icon_master_tender" alt="master tender">
-                  
-                <div class="master_tender_info">
-                  <span class="status_master_tender">Заказчик:</span> </br>
-                  <span class="name_master_tender">Иван Иванов</span>
-                </div>
-              </div>
-
-            </div>
-  
-        </div>
-
-        <div class="request_main_item accept  unlock d-flex">
-
-              <div class="status_bar d-flex">
-    
-                <div class="status_bar_left d-flex">
-                  <div class="bar_accept_request d-flex">Идет прием заявок</div>
-                  <div class="bar_noaccept_request d-flex">Прием заявок завершон</div>
-    
-    
-                  <div class="bar_progect d-flex">
-                    <img src="./img/have-progect.svg" alt="have-progect">
-                    <p>Есть проект</p>
-                  </div>
-    
-                  <div class="bar_unlock_tender d-flex">
-                    <img src="./img/icon-unlock.svg" alt="unlock">
-                    <p>Открытый тендер</p>
-                  </div>
-    
-                  <div class="bar_lock_tender d-flex">
-                    <img src="./img/icon-lock.svg" alt="unlock">
-                    <p>Закрытый тендер</p>
-                  </div>
-    
-    
-                  <div class="bar_view d-flex">
-                    <img src="./img/icon-eye.svg" alt="view">
-                    <p>211</p>
-                  </div>
-                </div>
-    
-                <span class="bar_onlypro">
-                  Только
-                  <span>PRO</span>
-                </span>
-    
-              </div>
-    
-              <div class="name_bar d-flex">
-    
-                <div class="bar_name_tender">
-                  <h3>Строительство теплого контура</h3>
-                </div>
-    
-                <div class="bar_cost">
-                  <span>2 000 000 – 2 400 000</span>
-                  руб.
-                </div>
-    
-              </div>
-    
-              <div class="tender_info d-flex">
-    
-                <div class="info_item">
-                  <div class="item_title">Технология:</div>
-                  <div class="item_text">Каркасная</div>
-                </div>
-    
-                <div class="info_item">
-                  <div class="item_title">Площадь дома:</div>
-                  <div class="item_text">98 м2</div>
-                </div>
-    
-                <div class="info_item">
-                  <div class="item_title">Адрес объекта:</div>
-                  <div class="item_text">Московская обл., пос. Зеленая долина</div>
-                </div>
-    
-              </div>
-    
-              <div class="time_info d-flex">
-    
-                <div class="time_open">
-    
-                  <div class="item_title">Опубликовано:</div>
-    
-                  <div class="item_data">
-                    <img src="./img/icon-calendar.svg" alt="calendar">
-                    <span>13.02.2018</span>
-                  </div>
-    
-                </div>
-    
-                <div class="time_close">
-    
-                  <div class="item_title">Прием заявок до:</div>
-      
-                  <div class="item_data">
-                    <img src="./img/icon-calendar.svg" alt="calendar">
-                    <span>13.03.2018</span>
-                  </div>
-      
-                </div>
-
-                <div class="master_tender d-flex">
-                  <img src="./img/icon-master-tender.png" class="icon_master_tender" alt="master tender">
-                    
-                  <div class="master_tender_info">
-                    <span class="status_master_tender">Заказчик:</span> </br>
-                    <span class="name_master_tender">Иван Иванов</span>
-                  </div>
-                </div>
-    
-              </div>
-    
-        </div>
-
       </div>
-
-      <div class="btn_see_all_tender d-flex">Посмотреть все тендеры</div>
-
-    </div>
-    <!-- НАЧАЛО КОНТЕЙНЕРА ОТЗЫВЫ -->
-    <div class="reviews d-flex">
-        <div class="container_reviews_top d-flex">
-
-          <h2>Отзывы о компаниях</h2>
-          <div class="tabs d-flex">
-              <div class="tab_left d-flex">
-                <img src="./img/pointerleft.svg" alt="pointerleft">
+      <div class="modal">
+          <div class="modal-container">
+            <div class="modal-left">
+              <h1 class="modal-title">Не нашли что искали?</h1>
+              <p class="modal-desc">Свяжемся и подберем именно под вас.</p>
+              <div class="input-block">
+                <!-- <label for="email" class="input-label">Имя</label> -->
+                <input type="email" name="email" id="email" placeholder="Имя">
               </div>
-              <div class="tab_right d-flex">
-                <img src="./img/pointerright.svg" alt="pointerright">
+              <div class="input-block">
+                <!-- <label for="password" class="input-label">Телефон</label> -->
+                <input type="password" name="password" id="password" placeholder="Телефон">
               </div>
-          </div>
-        </div>
-        
-        <div class="container_reviews_main d-flex">
-
-          <div class="reviews_item d-flex">
-
-            <div class="coment_main d-flex">
-
-              <div class="cloud d-flex">
-                <img src="./img/cloudmini.svg" alt="cloudmini">
+              <div class="input-block">
+                <!-- <label for="password" class="input-label">Сфера деятельности</label> -->
+                <input type="password" name="password" id="password" placeholder="Куда нужен фильтр?">
               </div>
-              
-              <div class="coment_main_top d-flex">
-
-                <div class="company_info d-flex">
-                  <div class="build-company d-flex">
-
-                  <img src="./img/icon-build-company.svg" class="icon_build-company" alt="build company">
-                  <div class="build-company_info">
-                      <span class="status_build-company">Исполнитель:</span> </br>
-                      <span class="name_build-company">ABSTRAKT</span>
-                  </div>
-                  </div>
-                  <div class="rating">
-                    <span>Оценка:</span>
-                    <div class="rating_item">
-                      <img src="./img/icon-star-red.svg" alt="red-star" class="star">
-                      <img src="./img/icon-star-red.svg" alt="red-star" class="star">
-                      <img src="./img/icon-star-red.svg" alt="red-star" class="star">
-                      <img src="./img/icon-star-red.svg" alt="red-star" class="star">
-                      <img src="./img/icon-star-grey.svg" alt="red-star" class="star">
-                    </div>
-                  </div>
-                </div>
-
-                <h3 class="coment_title">Укладка керамической плитки</h3>
-
-                <div class="coment_text_plus">
-                  <dt class="plus">Плюсы:</dt>
-                  <dd class="plus_text">Очень грамотная, коммуникабельная, легко нашла подход к ребенку, пунктуальная. Большим плюсом является, что занимается у нас дома, не нужно тратить время на дорогу. Минусы: нет Описание: Ребенок доволен, с удовольствием занимается</dd>
-                </div>
-
-                <div class="coment_text_minus">
-                  <dt class="minus">Минусы:</dt>
-                  <dd class="minus_text">Нет нареканий</dd>
-                </div>
-
-
-
-              </div>
-<!-- 
-              <div class="coment_main_title">
-                <h3>Укладка керамической плитки</h3>
-              </div> -->
-
-
-
-
-            </div>
-
-
-            <div class="coment_bottom d-flex">
-
-              <div class="master_tender d-flex">
-                <img src="./img/icon-master-tender.png" class="icon_master_tender" alt="master tender">
-                <div class="master_tender_info">
-                  <span class="status_master_tender">Заказчик:</span> </br>
-                  <span class="name_master_tender">Иван Иванов</span>
-                </div>
-              </div>
-
-              <span class="data_coment">21 декабря 2018</span>
-
-            </div>
-
-          </div>
-
-          <div class="reviews_item d-flex">
-
-              <div class="coment_main d-flex">
-  
-                <div class="cloud d-flex">
-                  <img src="./img/cloudmini.svg" alt="cloudmini">
-                </div>
-                
-                <div class="coment_main_top d-flex">
-  
-                  <div class="company_info d-flex">
-                    <div class="build-company d-flex">
-  
-                    <img src="./img/icon-build-company.svg" class="icon_build-company" alt="build company">
-                    <div class="build-company_info">
-                        <span class="status_build-company">Исполнитель:</span> </br>
-                        <span class="name_build-company">ABSTRAKT</span>
-                    </div>
-                    </div>
-                    <div class="rating">
-                    <span>Оценка:</span>
-                    <div class="rating_item">
-                      <img src="./img/icon-star-red.svg" alt="red-star" class="star">
-                      <img src="./img/icon-star-red.svg" alt="red-star" class="star">
-                      <img src="./img/icon-star-red.svg" alt="red-star" class="star">
-                      <img src="./img/icon-star-red.svg" alt="red-star" class="star">
-                      <img src="./img/icon-star-grey.svg" alt="red-star" class="star">
-                    </div>
-                    </div>
-                  </div>
-  
-                  <h3 class="coment_title">Укладка керамической плитки</h3>
-  
-                  <div class="coment_text_plus">
-                    <dt class="plus">Плюсы:</dt>
-                    <dd class="plus_text">Очень грамотная, коммуникабельная, легко нашла подход к ребенку, пунктуальная. Большим плюсом является, что занимается у нас дома, не нужно тратить время на дорогу. Минусы: нет Описание: Ребенок доволен, с удовольствием занимается</dd>
-                  </div>
-  
-                  <div class="coment_text_minus">
-                    <dt class="minus">Минусы:</dt>
-                    <dd class="minus_text">Нет нареканий</dd>
-                  </div>
-  
-  
-  
-                </div>
-  <!-- 
-                <div class="coment_main_title">
-                  <h3>Укладка керамической плитки</h3>
-                </div> -->
-  
-  
-  
-  
-              </div>
-  
-  
-              <div class="coment_bottom d-flex">
-  
-                <div class="master_tender d-flex">
-                  <img src="./img/icon-master-tender.png" class="icon_master_tender" alt="master tender">
-                  <div class="master_tender_info">
-                    <span class="status_master_tender">Заказчик:</span> </br>
-                    <span class="name_master_tender">Иван Иванов</span>
-                  </div>
-                </div>
-  
-                <span class="data_coment">21 декабря 2018</span>
-  
-              </div>
-  
-          </div>
-
-          <div class="reviews_item d-flex">
-
-              <div class="coment_main d-flex">
-  
-                <div class="cloud d-flex">
-                  <img src="./img/cloudmini.svg" alt="cloudmini">
-                </div>
-                
-                <div class="coment_main_top d-flex">
-  
-                  <div class="company_info d-flex">
-                    <div class="build-company d-flex">
-  
-                    <img src="./img/icon-build-company.svg" class="icon_build-company" alt="build company">
-                    <div class="build-company_info">
-                        <span class="status_build-company">Исполнитель:</span> </br>
-                        <span class="name_build-company">ABSTRAKT</span>
-                    </div>
-                    </div>
-                    <div class="rating">
-                    <span>Оценка:</span>
-                    <div class="rating_item">
-                      <img src="./img/icon-star-red.svg" alt="red-star" class="star">
-                      <img src="./img/icon-star-red.svg" alt="red-star" class="star">
-                      <img src="./img/icon-star-red.svg" alt="red-star" class="star">
-                      <img src="./img/icon-star-red.svg" alt="red-star" class="star">
-                      <img src="./img/icon-star-grey.svg" alt="red-star" class="star">
-                    </div>
-                    </div>
-                  </div>
-  
-                  <h3 class="coment_title">Укладка керамической плитки</h3>
-  
-                  <div class="coment_text_plus">
-                    <dt class="plus">Плюсы:</dt>
-                    <dd class="plus_text">Очень грамотная, коммуникабельная, легко нашла подход к ребенку, пунктуальная. Большим плюсом является, что занимается у нас дома, не нужно тратить время на дорогу. Минусы: нет Описание: Ребенок доволен, с удовольствием занимается</dd>
-                  </div>
-  
-                  <div class="coment_text_minus">
-                    <dt class="minus">Минусы:</dt>
-                    <dd class="minus_text">Нет нареканий</dd>
-                  </div>
-  
-  
-  
-                </div>
-  <!-- 
-                <div class="coment_main_title">
-                  <h3>Укладка керамической плитки</h3>
-                </div> -->
-  
-  
-  
-  
-              </div>
-  
-  
-              <div class="coment_bottom d-flex">
-  
-                <div class="master_tender d-flex">
-                  <img src="./img/icon-master-tender.png" class="icon_master_tender" alt="master tender">
-                  <div class="master_tender_info">
-                    <span class="status_master_tender">Заказчик:</span> </br>
-                    <span class="name_master_tender">Иван Иванов</span>
-                  </div>
-                </div>
-  
-                <span class="data_coment">21 декабря 2018</span>
-  
-              </div>
-  
-          </div>
-  
-          <div class="reviews_item d-flex">
-  
-                <div class="coment_main d-flex">
-    
-                  <div class="cloud d-flex">
-                    <img src="./img/cloudmini.svg" alt="cloudmini">
-                  </div>
-                  
-                  <div class="coment_main_top d-flex">
-    
-                    <div class="company_info d-flex">
-                      <div class="build-company d-flex">
-    
-                      <img src="./img/icon-build-company.svg" class="icon_build-company" alt="build company">
-                      <div class="build-company_info">
-                          <span class="status_build-company">Исполнитель:</span> </br>
-                          <span class="name_build-company">ABSTRAKT</span>
-                      </div>
-                      </div>
-                      <div class="rating">
-                      <span>Оценка:</span>
-                      <div class="rating_item">
-                        <img src="./img/icon-star-red.svg" alt="red-star" class="star">
-                        <img src="./img/icon-star-red.svg" alt="red-star" class="star">
-                        <img src="./img/icon-star-red.svg" alt="red-star" class="star">
-                        <img src="./img/icon-star-red.svg" alt="red-star" class="star">
-                        <img src="./img/icon-star-grey.svg" alt="red-star" class="star">
-                      </div>
-                      </div>
-                    </div>
-    
-                    <h3 class="coment_title">Укладка керамической плитки</h3>
-    
-                    <div class="coment_text_plus">
-                      <dt class="plus">Плюсы:</dt>
-                      <dd class="plus_text">Очень грамотная, коммуникабельная, легко нашла подход к ребенку, пунктуальная. Большим плюсом является, что занимается у нас дома, не нужно тратить время на дорогу. Минусы: нет Описание: Ребенок доволен, с удовольствием занимается</dd>
-                    </div>
-    
-                    <div class="coment_text_minus">
-                      <dt class="minus">Минусы:</dt>
-                      <dd class="minus_text">Нет нареканий</dd>
-                    </div>
-    
-                  </div>
-                </div>
-    
-    
-                <div class="coment_bottom d-flex">
-    
-                  <div class="master_tender d-flex">
-                    <img src="./img/icon-master-tender.png" class="icon_master_tender" alt="master tender">
-                    <div class="master_tender_info">
-                      <span class="status_master_tender">Заказчик:</span> </br>
-                      <span class="name_master_tender">Иван Иванов</span>
-                    </div>
-                  </div>
-    
-                  <span class="data_coment">21 декабря 2018</span>
-    
-                </div>
-    
-          </div>
-
-
-
-        </div>
-
-        <div class="btn_more_reviews d-flex">Показать больше</div>
-    </div>
-    <!-- НАЧАЛО КОНТЕЙНЕРА СТАТЕЙ -->
-    <div class="container_section d-flex">
-
-      <div class="section_main d-flex">
-
-        <div class="section_main_top d-flex">
-
-          <h2>Статьи из нашей базы</h2>
-          <div class="tabs d-flex">
-            <div class="tab_left d-flex">
-              <img src="./img/pointerleft.svg" alt="pointerleft">
-            </div>
-            <div class="tab_right d-flex">
-              <img src="./img/pointerright.svg" alt="pointerright">
-            </div>
-          </div>
-
-        </div>
-
-        <div class="section_main_content d-flex">
-
-          <div class="section_main_content_article d-flex">
-
-            <div class="article_rubric d-flex">
-              <img src="./img/ansvo-inarticle.svg" alt="logo-in-article">
-              <span>Ремонт и строительство</span>
-            </div>
-
-            <div class="article_main d-flex">
-              <h3>Нюансы строительства дома на глинистом участке</h3>
-              <div class="article_main_text">
-                <p>«Эффективное управление затратами в агробизнесе» — главная тема Fashion-фермер 2018. В этом году полевая выставочная площадка</p>
-              </div>
-              <div class="article_main_readmore">
-                <span>Читать подробнее</span>
+              <div class="modal-buttons">
+                <button class="btn">Отправить</button>
               </div>
             </div>
-
-            <div class="article_info d-flex">
-              <div class="article_info_coment d-flex">
-                <img src="./img/icon-chat.svg" alt="chat">
-                <span>14</span>
-              </div>
-
-              <div class="article_info_view d-flex">
-                <img src="./img/icon-eye.svg" alt="eye">
-                <span>211</span>
-              </div>
-
-              <time>21 декабря 2018</time>
-
+            <div class="modal-right d-flex">
+              <img src="./img/МЕНЕДЖЕР_1.svg" alt="">
             </div>
-
+            <button class="icon-button close-button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+            <path d="M 25 3 C 12.86158 3 3 12.86158 3 25 C 3 37.13842 12.86158 47 25 47 C 37.13842 47 47 37.13842 47 25 C 47 12.86158 37.13842 3 25 3 z M 25 5 C 36.05754 5 45 13.94246 45 25 C 45 36.05754 36.05754 45 25 45 C 13.94246 45 5 36.05754 5 25 C 5 13.94246 13.94246 5 25 5 z M 16.990234 15.990234 A 1.0001 1.0001 0 0 0 16.292969 17.707031 L 23.585938 25 L 16.292969 32.292969 A 1.0001 1.0001 0 1 0 17.707031 33.707031 L 25 26.414062 L 32.292969 33.707031 A 1.0001 1.0001 0 1 0 33.707031 32.292969 L 26.414062 25 L 33.707031 17.707031 A 1.0001 1.0001 0 0 0 32.980469 15.990234 A 1.0001 1.0001 0 0 0 32.292969 16.292969 L 25 23.585938 L 17.707031 16.292969 A 1.0001 1.0001 0 0 0 16.990234 15.990234 z"></path>
+        </svg>
+              </button>
           </div>
-
-          <div class="section_main_content_article d-flex">
-
-              <div class="article_rubric d-flex">
-                <img src="./img/ansvo-inarticle.svg" alt="logo-in-article">
-                <span>Ремонт и строительство</span>
-              </div>
-  
-              <div class="article_main d-flex">
-                <h3>Нюансы строительства дома на глинистом участке</h3>
-                <div class="article_main_text">
-                  <p>«Эффективное управление затратами в агробизнесе» — главная тема Fashion-фермер 2018. В этом году полевая выставочная площадка</p>
-                </div>
-                <div class="article_main_readmore">
-                  <span>Читать подробнее</span>
-                </div>
-              </div>
-  
-              <div class="article_info d-flex">
-                <div class="article_info_coment d-flex">
-                  <img src="./img/icon-chat.svg" alt="chat">
-                  <span>14</span>
-                </div>
-  
-                <div class="article_info_view d-flex">
-                  <img src="./img/icon-eye.svg" alt="eye">
-                  <span>211</span>
-                </div>
-  
-                <time>21 декабря 2018</time>
-  
-              </div>
-  
-          </div>
-
-          <div class="section_main_content_article d-flex">
-
-              <div class="article_rubric d-flex">
-                <img src="./img/ansvo-inarticle.svg" alt="logo-in-article">
-                <span>Ремонт и строительство</span>
-              </div>
-  
-              <div class="article_main d-flex">
-                <h3>Нюансы строительства дома на глинистом участке</h3>
-                <div class="article_main_text">
-                  <p>«Эффективное управление затратами в агробизнесе» — главная тема Fashion-фермер 2018. В этом году полевая выставочная площадка</p>
-                </div>
-                <div class="article_main_readmore">
-                  <span>Читать подробнее</span>
-                </div>
-              </div>
-  
-              <div class="article_info d-flex">
-                <div class="article_info_coment d-flex">
-                  <img src="./img/icon-chat.svg" alt="chat">
-                  <span>14</span>
-                </div>
-  
-                <div class="article_info_view d-flex">
-                  <img src="./img/icon-eye.svg" alt="eye">
-                  <span>211</span>
-                </div>
-  
-                <time>21 декабря 2018</time>
-  
-              </div>
-  
-          </div>
-        </div>
-
+          <button class="modal-button btn">Подобрать индивидуально</button>
+    
       </div>
     </div>
   </main>
-  <!-- НАЧАЛО ПОДВАЛА СТРАНИЦЫ -->
   <footer>
-    <!-- НАЧАЛО ОСНОВНОЙ ИНФОРМАЦИИ ПОДВАЛА -->
-    <div class="footer_main d-flex">
-      <!-- НАЧАЛО ЛОГОТИП ПОЧТА ТЕЛЕФОН СОЦСЕТИ -->
-      <div class="footer_contacts d-flex">
-        <div class="footer_contacts_item d-flex">
-          <img src="./img/logo.svg" alt="logo">
+    <div class="container footer d-flex">
+      <div class="wrapper footer-info d-flex">
+        <div class="footer-info-left d-flex">
+          <img src="./img/МЕНЕДЖЕР_ПОДВАЛ.svg" alt="managerfooter">
         </div>
-
-        <div class="footer_contacts_item">
-          <span class="title">E-mail:</span><br/>
-          <span class="text">info@ansvo.ru</span>
+        <div class="footer-info-right d-flex">
+          <h3>Контакты:</h3>
+          <p><strong>Мы распологаемся по адресу:</strong></p>
+          <p>г.Рязань Ул.Монтажников 3Б</p>
+          <p><strong>Телефон:</strong></p>
+          <p>+7 000 00 000 00</p>
+          <p>+7 000 00 000 00</p>
+          <p><strong> Почта:</strong></p>
+          <p>filtrsale@chisto.com</p>
+          <p>filtrbuy@chisto.com</p>
         </div>
-
-        <div class="footer_contacts_item">
-          <span class="title">По вопросам сервиса:</span><br/>
-          <span class="text">8 (965) 715-19-91</span>
-        </div>
-
-        <div class="footer_contacts_item d-flex">
-          <img src="./img/icon-vk.svg" alt="vk">
-          <img src="./img/icon-facebook.svg" alt="fb">
-          <img src="./img/icon-instagram.svg" alt="ingr">
-        </div>
-
-      </div>
-      <!-- НАЧАЛО МЕНЮ С РАЗДЕЛАМИ САЙТА -->
-      <div class="footer_menu d-flex">
-
-        <div class="footer_menu_item d-flex">
-          <span>Информация</span>
-          <a href="#">О проекте</a>
-          <a href="#">Команда</a>
-          <a href="#">Контакты</a>
-        </div>
-
-        <div class="footer_menu_item d-flex">
-          <span>Заказчикам</span>
-          <a href="#">Регистрация</a>
-          <a href="#">Как это работает</a>
-          <a href="#">Каталог компаний</a>
-          <a href="#">Ленты событий</a>
-          <a href="#">База договоров</a>
-          <a href="#">Основные понятия</a>
-          <a href="#">Помощь</a>
-        </div>
-
-        <div class="footer_menu_item d-flex">
-          <span>Исполнителям</span>
-          <a href="#">Регистрация</a>
-          <a href="#">Как это работает</a>
-          <a href="#" class="akaunt"><span>PRO</span> аккаунт</a>
-        </div>
-
-        <div class="footer_menu_item d-flex">
-            <span>Поиск работы</span>
-            <a href="#">Разместить вакансию</a>
-            <a href="#">Посмотреть вакансии</a>
-          </div>
-
-      </div>
-    </div>
-    <!-- НИЗ ПОДВАЛА -->
-    <div class="footer_down d-flex">
-      <div class="footer_down_info d-flex">
-        
-        <div class="footer_down_info_item d-flex">
-          <span>©Ansvo, 2019</span>
-        </div>
-
-        <div class="footer_down_info_item d-flex">
-          <span>Пользовательское соглашение</span>
-        </div>
-
-        <div class="footer_down_info_item d-flex">
-          <span>Политика конфиденциальности</span>
-        </div>
-
       </div>
     </div>
   </footer>
+  <!-- <script  src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script  src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+  <script  src="slick/slick.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script  src="slick/slick.min.js"></script>
+  <script  src="libs/sal.js"></script>
+
+
+  <!-- <script src="libs/jquery/jquery-3.4.1.min.js"></script> -->
+  <script src="js/mycode.js"></script>
 </body>
 </html>
